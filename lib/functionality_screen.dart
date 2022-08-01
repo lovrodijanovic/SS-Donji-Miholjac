@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class FunctionalityScreen extends StatelessWidget {
-  final String functionalityId;
-  final String functionalityTitle;
+  final String pageTitle;
+  final Widget child;
 
-  FunctionalityScreen(this.functionalityId, this.functionalityTitle);
+  FunctionalityScreen({required this.pageTitle, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(functionalityTitle)),
-      body: Center(child: Text('TBA')),
+      appBar: AppBar(title: Text(pageTitle)),
+      body: child,
     );
   }
 }
