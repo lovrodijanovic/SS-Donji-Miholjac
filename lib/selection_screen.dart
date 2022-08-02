@@ -9,22 +9,24 @@ class SelectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            title: const Text(
-          'Srednja škola Donji Miholjac',
-          style: TextStyle(fontFamily: 'Raleway', fontSize: 25),
-        )),
-        body: GridView(
+      appBar: AppBar(
+          title: const Text(
+        'Srednja škola Donji Miholjac',
+        style: TextStyle(fontFamily: 'Raleway', fontSize: 20),
+      )),
+      body: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(100)),
+        child: GridView(
           padding: const EdgeInsets.all(32),
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              childAspectRatio: 2,
-              mainAxisSpacing: 20,
-              crossAxisSpacing: 20),
+            maxCrossAxisExtent: 200,
+          ),
           children: DUMMY_FUNCTIONALITIES
-              .map((funData) =>
-                  FunctionalityItem(funData.id, funData.title.toUpperCase()))
+              .map((funData) => FunctionalityItem(
+                  funData.id, funData.title.toUpperCase(), funData.icon))
               .toList(),
-        ));
+        ),
+      ),
+    );
   }
 }
