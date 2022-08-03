@@ -4,7 +4,7 @@ class FunctionalityScreen extends StatelessWidget {
   final String pageTitle;
   final Widget child;
 
-  FunctionalityScreen({required this.pageTitle, required this.child});
+  const FunctionalityScreen({required this.pageTitle, required this.child});
 
   @override
   Widget build(BuildContext context) {

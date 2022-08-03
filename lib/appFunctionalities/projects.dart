@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AboutSchool extends StatelessWidget {
+class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text('projects');

@@ -23,7 +23,7 @@ class SelectionScreen extends StatelessWidget {
           ),
           children: DUMMY_FUNCTIONALITIES
               .map((funData) => FunctionalityItem(
-                  funData.id, funData.title.toUpperCase(), funData.icon))
+                  funData.id, funData.title.toUpperCase(), funData.icon, funData.route))
               .toList(),
         ),
       ),

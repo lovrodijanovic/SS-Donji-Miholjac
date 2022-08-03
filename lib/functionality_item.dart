@@ -4,17 +4,21 @@ class FunctionalityItem extends StatelessWidget {
   final String id;
   final String title;
   final Icon icon;
+  final String route;
 
-  const FunctionalityItem(this.id, this.title, this.icon, {Key? key}) : super(key: key);
+  const FunctionalityItem(this.id, this.title, this.icon, this.route, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, route);
+      },
       splashColor: Theme.of(context).primaryColor,
       child: Container(
           decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(color: Color.fromARGB(255, 231, 231, 231))),
+              border: Border.all(color: const Color.fromARGB(255, 231, 231, 231))),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
