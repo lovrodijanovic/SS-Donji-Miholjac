@@ -2,31 +2,56 @@ import 'package:flutter/material.dart';
 import 'package:ss_donji_miholjac/functionality_screen.dart';
 
 class AboutSchool extends StatelessWidget {
-  static const String aboutSchool =
-      "Srednja škola Donji Miholjac javna je ustanova koja obavlja svoju djelatnost u skladu s Aktom o osnivanju škole i rješenjima ministarstva nadležnog za poslove obrazovanja i odobrenja izvođenja programa. Službeno je registrirana 12. studenog 1992. godine i pod ovim nazivom djeluje kao pravni sljedbenik Srednjoškolskog centra 'Braća Ribar' Donji Miholjac. Škola je polivalentna jer obrazujemo učenike u četiri područja kako za trogodišnja tako i četverogodišnja zanimanja i programe. Više o školi potražite na dijelu 'Povijest' i 'Nastava'. U prilogu se nalaze prezentacije o našem gradu, a video prikaze škole možete potražiti na Youtube kanalu naše škole.";
+  static const String aboutSchool = """
+Povijest srednjeg školstva na području Donjeg Miholjca ima bogatu vremensku tradiciju. Još davna 1890. godina smatra se početkom obrtničkog školstva u Donjem Miholjcu kada su pri pučkoj školi prvi šegrti počeli učiti naukovne osnove svojih obrta. 
+
+Godine 1947. godine škola dobiva naziv Škola učenika u privredi Donji Miholjac (popularno ŠUP). Gimnazijsko školovanje u Donjem Miholjcu započinje školske godine 1944. /45. , a 1965. godine počela je sa radom Gimnazija 'Ivo Lola Ribar' koja je preteča današnjeg gimnazijskog školovanja. 
+
+Godine 1960. počela je sa radom Strojarsko - poljoprivredna škola Donji Miholjac. Spajanjem Škole učenika u privredi, Gimnazije i Strojarsko - poljoprivredne škole 1969. godine započinje sa radom  jedinstvena ustanova pod nazivom Srednjoškolski centar 'Braća Ribar' Donji Miholjac. 
+
+Današnja Srednja škola Donji Miholjac službeno je registrirana 12. studenog 1992. godine. Radovi na izgradnji nove zgrade škole i sportske dvorane započeli su 23. svibnja 2020. godine, a predviđeni datum tehničkog pregleda gotove zgrade je 1. lipanj 2022. godine. Na fotografijama možete vidjeti kako je zgrada izgledala kada je izgrađena, kako je izgledala prije rušenja te kako gradilište izgleda 1. siječnja 2022. godine.""";
 
   const AboutSchool({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FunctionalityScreen(
-        pageTitle: 'O školi',
-        child: Column(
-          children: [
-            Container(
-                padding: const EdgeInsets.all(20),
-                child: const Card(child: Text(aboutSchool))),
-            ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(),
-                child: const Text('Povijest')),
-            ElevatedButton(onPressed: () {}, child: const Text('Kontakti')),
-            ElevatedButton(onPressed: () {}, child: const Text('Dokumenti škole')),
-            ElevatedButton(onPressed: () {}, child: const Text('Knjižnica')),
-            ElevatedButton(onPressed: () {}, child: const Text('Godišnjaci')),
-            ElevatedButton(onPressed: () {}, child: const Text('Razredi')),
-            ElevatedButton(onPressed: () {}, child: const Text('Djelatnici'))
-          ],
-        ));
+      pageTitle: 'O školi',
+      child: ListView(
+        children: [
+          Container(
+              padding: const EdgeInsets.all(20),
+              child: Card(
+                  child: Column(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 10, top: 10),
+                    child: const Text(
+                      'Kratka povijest škole',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    child: const Text(
+                      aboutSchool,
+                      style: TextStyle(height: 1.5),
+                    ),
+                  ),
+                ],
+              ))),
+          Container(
+            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
+            child: Image.network(
+                'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/24/Image/celestina.jpg'),
+          ),
+          Container(
+            margin: const EdgeInsets.only(left: 20, right: 20),
+            child: Image.network(
+                'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/24/Image/naslovnica.JPG'),
+          )
+        ],
+      ),
+    );
   }
 }

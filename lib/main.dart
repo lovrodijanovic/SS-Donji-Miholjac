@@ -33,21 +33,22 @@ class MyApp extends StatelessWidget {
                   bodyText2: const TextStyle(
                     color: Color.fromRGBO(20, 51, 51, 1),
                   ),
-                ), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.yellow).copyWith(secondary: Colors.lightGreenAccent)),
+                ),
+            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.yellow)
+                .copyWith(secondary: Colors.lightGreenAccent)),
         initialRoute: '/',
         routes: {
           '/': (context) => SelectionScreen(),
           'aboutSchool': (context) => const AboutSchool(),
-          'programDescription' : (context) => const ProgramDescription(),
-          'scedule' : (context) => Scedule(),
-          'events' : (context) => Events(),
-          'projects' : (context) => Projects(),
-          'studentAssociation' : (context) => StudentAssociation(),
-          'firstGrade' : (context) => FirstGrade(),
-          'lastGrade' : (context) => LastGrade(),
-          'notifications' : (context) => Notifications(),
-          'informationAndContact' : (context) => InformationAndContact(),
+          'programDescription': (context) => const ProgramDescription(),
+          'scedule': (context) => Scedule(),
+          'events': (context) => Events(),
+          'projects': (context) => Projects(),
+          'studentAssociation': (context) => const StudentAssociation(),
+          'firstGrade': (context) => const FirstGrade(),
+          'lastGrade': (context) => LastGrade(),
+          'notifications': (context) => Notifications(),
+          'informationAndContact': (context) => const InformationAndContact(),
         });
-              
   }
 }
