@@ -42,11 +42,11 @@ class MyApp extends StatelessWidget {
           'scedule' : (context) => Scedule(),
           'events' : (context) => Events(),
           'projects' : (context) => Projects(),
-          'studentAssociation' : (context) => StudentAssociation(),
-          'firstGrade' : (context) => FirstGrade(),
+          'studentAssociation' : (context) => const StudentAssociation(),
+          'firstGrade' : (context) => const FirstGrade(),
           'lastGrade' : (context) => LastGrade(),
           'notifications' : (context) => Notifications(),
-          'informationAndContact' : (context) => InformationAndContact(),
+          'informationAndContact' : (context) => const InformationAndContact(),
         });
               
   }
