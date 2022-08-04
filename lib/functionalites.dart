@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './models/functionalities.dart';
+import 'models/functionality.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 
-const DUMMY_FUNCTIONALITIES = [
+const functionalities = [
   Functionaly(
     id: 'f1',
     title: 'O školi',

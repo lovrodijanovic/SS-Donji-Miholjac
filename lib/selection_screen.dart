@@ -1,8 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
-import 'package:ss_donji_miholjac/dummy_functionalites.dart';
-import './dummy_functionalites.dart';
+import 'package:ss_donji_miholjac/functionalites.dart';
+import 'functionalites.dart';
 import './functionality_item.dart';
 
 class SelectionScreen extends StatelessWidget {
@@ -21,7 +21,7 @@ class SelectionScreen extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 200,
           ),
-          children: DUMMY_FUNCTIONALITIES
+          children: functionalities
               .map((funData) => FunctionalityItem(
                   funData.id, funData.title.toUpperCase(), funData.icon, funData.route))
               .toList(),
