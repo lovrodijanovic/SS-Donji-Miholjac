@@ -8,9 +8,11 @@ import 'package:ss_donji_miholjac/appFunctionalities/notifications.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/program_description.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/student_association.dart';
 import 'package:ss_donji_miholjac/selection_screen.dart';
+import 'package:ss_donji_miholjac/splash.dart';
 import './appFunctionalities/about_school.dart';
 import 'appFunctionalities/projects.dart';
 import 'appFunctionalities/scedule.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Srednja škola Donji Miholjac',
         theme: ThemeData(
-            canvasColor: const Color.fromARGB(223, 75, 202, 128),
+            canvasColor: HexColor('E5EFF3'),
             fontFamily: 'Raleway',
             textTheme: ThemeData.light().textTheme.copyWith(
                   bodyText1: const TextStyle(
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
                 .copyWith(secondary: Colors.lightGreenAccent)),
         initialRoute: '/',
         routes: {
-          '/': (context) => SelectionScreen(),
+          '/': (context) => const Splash(),
           'aboutSchool': (context) => const AboutSchool(),
           'programDescription': (context) => const ProgramDescription(),
           'scedule': (context) => Scedule(),
