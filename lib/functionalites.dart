@@ -4,32 +4,29 @@ import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 
 const functionalities = [
   Functionaly(
-    id: 'f1',
-    title: 'O školi',
-    icon: Icon(
-      PhosphorIcons.house_line,
-      size: 56.0,
-    ),
-    route: 'aboutSchool'
-  ),
+      id: 'f1',
+      title: 'O školi',
+      icon: Icon(
+        PhosphorIcons.house_line,
+        size: 56.0,
+      ),
+      route: 'aboutSchool'),
   Functionaly(
       id: 'f2',
-      title: 'Opis programa',
+      title: 'Programi i zanimanja',
       icon: Icon(
         PhosphorIcons.book_bookmark,
         size: 56.0,
       ),
-      route: 'programDescription'
-      ),
+      route: 'programDescription'),
   Functionaly(
       id: 'f3',
-      title: 'Raspored sati',
+      title: 'Raspored',
       icon: Icon(
         PhosphorIcons.clock,
         size: 56.0,
       ),
-      route: 'scedule'
-      ),
+      route: 'scedule'),
   Functionaly(
       id: 'f4',
       title: 'Događanja',
@@ -37,8 +34,7 @@ const functionalities = [
         PhosphorIcons.calendar_check,
         size: 56.0,
       ),
-      route: 'events'
-      ),
+      route: 'events'),
   Functionaly(
       id: 'f5',
       title: 'Projekti',
@@ -46,8 +42,7 @@ const functionalities = [
         PhosphorIcons.lightbulb,
         size: 56.0,
       ),
-      route: 'projects'
-      ),
+      route: 'projects'),
   Functionaly(
       id: 'f6',
       title: 'Učenička zadruga',
@@ -55,8 +50,7 @@ const functionalities = [
         PhosphorIcons.handshake,
         size: 56.0,
       ),
-      route: 'studentAssociation'
-      ),
+      route: 'studentAssociation'),
   Functionaly(
       id: 'f7',
       title: 'Upis u prvi razred',
@@ -75,15 +69,15 @@ const functionalities = [
       route: 'lastGrade'),
   Functionaly(
       id: 'f9',
-      title: 'Obavijesti',
+      title: 'Oglasna ploča',
       icon: Icon(
-        PhosphorIcons.bell,
+        PhosphorIcons.clipboard,
         size: 56.0,
       ),
       route: 'notifications'),
   Functionaly(
       id: 'f10',
-      title: 'Informacije i kontakt',
+      title: 'Informacije i kontakt, knjižnica',
       icon: Icon(
         PhosphorIcons.info,
         size: 56.0,
