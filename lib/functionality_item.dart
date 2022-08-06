@@ -14,14 +14,15 @@ class FunctionalityItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(30),
       onTap: () {
         Navigator.pushNamed(context, route);
       },
       splashColor: Theme.of(context).primaryColor,
       child: Container(
-          decoration: const BoxDecoration(
-            color: Colors.white,
-          ),
+        decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(15), 
+          boxShadow: [BoxShadow(spreadRadius: 0.1, blurRadius: 1, color: Colors.grey.withOpacity(0.6), offset: const Offset(0, 5)),]),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [

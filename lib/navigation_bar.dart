@@ -1,23 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
+import 'package:ss_donji_miholjac/functionalites.dart';
 import 'package:ss_donji_miholjac/selection_screen.dart';
 
-class MyNavigationBar extends StatefulWidget {
-  const MyNavigationBar({Key? key}) : super(key: key);
+import 'models/functionality.dart';
 
+class MyNavigationBar extends StatefulWidget {
+  List<Functionaly> studentFunctionalities = [
+    functionalities.elementAt(8),
+    functionalities.elementAt(2),
+    functionalities.elementAt(6),
+    functionalities.elementAt(4),
+    functionalities.elementAt(5)
+    ];
+  List<Functionaly> parentFunctionalities = [
+    functionalities.elementAt(8),
+    functionalities.elementAt(2),
+    functionalities.elementAt(3),
+    functionalities.elementAt(4),
+    ];
+  List<Functionaly> schoolFunctionalities = [
+    functionalities.elementAt(0),
+    functionalities.elementAt(8),
+    functionalities.elementAt(1),
+    functionalities.elementAt(4),
+    functionalities.elementAt(9)
+  ];
   @override
   State<MyNavigationBar> createState() => _MyNavigationBarState();
 }
 
 class _MyNavigationBarState extends State<MyNavigationBar> {
   int _selectedIndex = 0;
+
   static final List<Widget> _widgetOptions = <Widget>[
-    SelectionScreen(),
-    SelectionScreen(),
-    SelectionScreen(),
-    SelectionScreen(),
+    SelectionScreen(gridTitle: 'Istraži istaknute kategorije', shownFunctionalities: MyNavigationBar().studentFunctionalities),
+    SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().studentFunctionalities),
+    SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().parentFunctionalities),
+    SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().schoolFunctionalities),
   ];
+  
 
   void _onItemTapped(int index) {
     setState(() {

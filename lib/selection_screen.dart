@@ -4,14 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:ss_donji_miholjac/functionalites.dart';
 import 'functionalites.dart';
 import './functionality_item.dart';
+import 'models/functionality.dart';
 
 class SelectionScreen extends StatelessWidget {
+  final String gridTitle;
+  final List<Functionaly> shownFunctionalities;
+  
+  SelectionScreen({required this.gridTitle, required this.shownFunctionalities});
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           Padding(
@@ -75,7 +81,7 @@ class SelectionScreen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 16, top: 30),
             child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Istraži istaknute kategorije',
+                child: Text(gridTitle,
                     style: GoogleFonts.getFont('Poppins',
                         fontWeight: FontWeight.w600,
                         fontSize: 15,
@@ -89,7 +95,7 @@ class SelectionScreen extends StatelessWidget {
                 mainAxisSpacing: 30,
                 maxCrossAxisExtent: 200,
               ),
-              children: functionalities
+              children: shownFunctionalities
                   .map((funData) => FunctionalityItem(
                       funData.id, funData.title, funData.image, funData.route))
                   .toList(),
