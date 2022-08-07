@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class FunctionalityScreen extends StatelessWidget {
   final String pageTitle;
@@ -9,7 +10,10 @@ class FunctionalityScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(pageTitle)),
+      appBar: AppBar(
+        title: Text(pageTitle),
+        backgroundColor: HexColor('#006D77'),
+      ),
       body: child,
     );
   }
