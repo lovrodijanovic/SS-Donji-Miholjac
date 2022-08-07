@@ -35,9 +35,7 @@ class MyApp extends StatelessWidget {
                   bodyText2: const TextStyle(
                     color: Color.fromRGBO(20, 51, 51, 1),
                   ),
-                ),
-            colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.yellow)
-                .copyWith(secondary: Colors.lightGreenAccent)),
+                ),),
         initialRoute: '/',
         routes: {
           '/': (context) => const Splash(),

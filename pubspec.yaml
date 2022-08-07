@@ -29,15 +29,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   animated_splash_screen:
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   material: ^1.0.0+2
   flutter_phosphor_icons: ^0.0.1+6
   google_fonts: ^3.0.1
   hexcolor: ^2.0.7
+  flutter_svg: ^1.1.3
 
 dev_dependencies:
   flutter_test:
@@ -63,17 +61,29 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/happy_students.png
+    - assets/images/happy_students.svg
     - assets/images/dogadanja.png
+    - assets/images/dogadanja.svg
     - assets/images/high_school.png
+    - assets/images/high_school.svg
     - assets/images/knjiznica.png
+    - assets/images/knjiznica.svg
     - assets/images/kontakt.png
+    - assets/images/kontakt.svg
     - assets/images/oglasna_ploca.png
+    - assets/images/oglasna_ploca.svg
     - assets/images/programi_zanimanja.png
+    - assets/images/programi_zanimanja.svg
     - assets/images/projekti.png
+    - assets/images/projekti.svg
     - assets/images/raspored.png
+    - assets/images/raspored.svg
     - assets/images/udruga.png
+    - assets/images/udruga.svg
     - assets/images/upisi_u_prvi_razred.png
+    - assets/images/upisi_u_prvi_razred.svg
     - assets/images/zavrsni_razredi.png
+    - assets/images/zavrsni_razredi.svg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

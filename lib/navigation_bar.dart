@@ -7,20 +7,20 @@ import 'package:ss_donji_miholjac/selection_screen.dart';
 import 'models/functionality.dart';
 
 class MyNavigationBar extends StatefulWidget {
-  List<Functionaly> studentFunctionalities = [
+  final List<Functionality> studentFunctionalities = [
     functionalities.elementAt(8),
     functionalities.elementAt(2),
     functionalities.elementAt(6),
     functionalities.elementAt(4),
     functionalities.elementAt(5)
     ];
-  List<Functionaly> parentFunctionalities = [
+  final List<Functionality> parentFunctionalities = [
     functionalities.elementAt(8),
     functionalities.elementAt(2),
     functionalities.elementAt(3),
     functionalities.elementAt(4),
     ];
-  List<Functionaly> schoolFunctionalities = [
+  final List<Functionality> schoolFunctionalities = [
     functionalities.elementAt(0),
     functionalities.elementAt(8),
     functionalities.elementAt(1),

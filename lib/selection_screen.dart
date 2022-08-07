@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'functionalites.dart';
 import './functionality_item.dart';
 import 'models/functionality.dart';
 
 class SelectionScreen extends StatelessWidget {
   final String gridTitle;
-  final List<Functionaly> shownFunctionalities;
+  final List<Functionality> shownFunctionalities;
   
-  SelectionScreen({required this.gridTitle, required this.shownFunctionalities});
+  const SelectionScreen({required this.gridTitle, required this.shownFunctionalities});
   
   @override
   Widget build(BuildContext context) {
@@ -25,16 +24,16 @@ class SelectionScreen extends StatelessWidget {
                 EdgeInsets.only(top: MediaQuery.of(context).viewPadding.top),
             child: Card(
                 shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                    borderRadius: BorderRadius.all(Radius.circular(45))),
                 color: HexColor('#006D77'),
                 child: SizedBox(
                   width: double.infinity,
                   child: Column(
                     children: [
                       Align(
-                        alignment: Alignment.topRight,
+                        alignment: Alignment.centerRight,
                         child: IconButton(
-                          alignment: Alignment.centerLeft,
+                          padding: const EdgeInsets.only(right: 20, top: 20),
                           onPressed: () {
                             Navigator.pushNamed(
                                 context, 'informationAndContact');
@@ -46,33 +45,50 @@ class SelectionScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 30, bottom: 40),
-                        child: Column(
-                          children: [
-                            Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Dobrodošli,',
-                                  style: GoogleFonts.getFont('Poppins',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 15,
-                                      fontStyle: FontStyle.normal),
-                                )),
-                            Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Srednja škola Donji Miholjac',
-                                  style: GoogleFonts.getFont('Poppins',
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontStyle: FontStyle.normal),
-                                ))
-                          ],
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Container(
+                          padding: const EdgeInsets.only(bottom: 30),
+                          child: Column(
+                            children: [
+                              Text(
+                                'Dobrodošli,',
+                                style: GoogleFonts.getFont('Poppins',
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 20,
+                                    fontStyle: FontStyle.normal),
+                              ),
+                              Text(
+                                'Srednja škola Donji Miholjac',
+                                style: GoogleFonts.getFont('Poppins',
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontStyle: FontStyle.normal),
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                      Text('Placeholder za search barFSAFSAF')
+                      Card(
+                        margin: const EdgeInsets.all(20),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Pretraži temu",
+                            hintStyle: GoogleFonts.getFont('Poppins',
+                                      color: Colors.grey,
+                                      fontSize: 15,
+                                      fontStyle: FontStyle.italic),
+                            prefixIcon: Icon(Icons.search, color: HexColor('#006D77'),),
+                            border: const OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(30.0))
+                            )
+                            )
+                          ),
+                      ),
                     ],
                   ),
                 )),

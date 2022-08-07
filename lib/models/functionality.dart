@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/svg.dart';
 
-class Functionaly {
+class Functionality {
   final String id;
   final String title;
-  final Image image;
+  final SvgPicture image;
   final String route;
 
-  const Functionaly(
-      {required this.id,
-      required this.title,
-      required this.image,
-      required this.route});
+  const Functionality(
+      this.id,
+      this.title,
+      this.image,
+      this.route);
 }

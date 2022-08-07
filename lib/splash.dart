@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ss_donji_miholjac/selection_screen.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'navigation_bar.dart';
@@ -31,8 +31,8 @@ class _SplashState extends State<Splash> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Image.asset(
-              'assets/images/happy_students.png',
+            SvgPicture.asset(
+              'assets/images/happy_students.svg',
               fit: BoxFit.contain,
             ),
             Column(
