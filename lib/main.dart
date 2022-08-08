@@ -26,29 +26,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Srednja škola Donji Miholjac',
         theme: ThemeData(
-            canvasColor: HexColor('E5EFF3'),
-            fontFamily: 'Raleway',
-            textTheme: ThemeData.light().textTheme.copyWith(
-                  bodyText1: const TextStyle(
-                    color: Color.fromRGBO(20, 51, 51, 1),
-                  ),
-                  bodyText2: const TextStyle(
-                    color: Color.fromRGBO(20, 51, 51, 1),
-                  ),
-                ),),
+          canvasColor: HexColor('E5EFF3'),
+          fontFamily: 'Raleway',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                bodyText1: const TextStyle(
+                  color: Color.fromRGBO(20, 51, 51, 1),
+                ),
+                bodyText2: const TextStyle(
+                  color: Color.fromRGBO(20, 51, 51, 1),
+                ),
+              ),
+        ),
         initialRoute: '/',
         routes: {
           '/': (context) => const Splash(),
-          'aboutSchool': (context) => const AboutSchool(),
-          'programDescription': (context) => const ProgramDescription(),
+          'aboutSchool': (context) => AboutSchool(),
+          'programDescription': (context) => ProgramDescription(),
           'scedule': (context) => Scedule(),
           'events': (context) => Events(),
           'projects': (context) => Projects(),
-          'studentAssociation': (context) => const StudentAssociation(),
-          'firstGrade': (context) => const FirstGrade(),
+          'studentAssociation': (context) => StudentAssociation(),
+          'firstGrade': (context) => FirstGrade(),
           'lastGrade': (context) => LastGrade(),
           'notifications': (context) => Notifications(),
-          'informationAndContact': (context) => const InformationAndContact(),
+          'informationAndContact': (context) => InformationAndContact(),
         });
   }
 }
