@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:ss_donji_miholjac/functionalites.dart';
+import 'package:ss_donji_miholjac/screenWithFavourites.dart';
 import 'package:ss_donji_miholjac/selection_screen.dart';
 
 import 'models/functionality.dart';
@@ -12,7 +13,8 @@ class MyNavigationBar extends StatefulWidget {
     functionalities.elementAt(2),
     functionalities.elementAt(6),
     functionalities.elementAt(4),
-    functionalities.elementAt(5)
+    functionalities.elementAt(5),
+    functionalities.elementAt(7),
     ];
   final List<Functionality> parentFunctionalities = [
     functionalities.elementAt(8),
@@ -35,7 +37,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    SelectionScreen(gridTitle: 'Istraži istaknute kategorije', shownFunctionalities: MyNavigationBar().studentFunctionalities),
+    ScreenWithFavourites(),
     SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().studentFunctionalities),
     SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().parentFunctionalities),
     SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().schoolFunctionalities),

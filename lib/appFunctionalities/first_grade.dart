@@ -50,18 +50,16 @@ class FirstGrade extends StatelessWidget {
                             fontStyle: FontStyle.normal),
                       ),
                     ))),
-                Container(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: Color.fromRGBO(0, 109, 119, 1)),
-                    onPressed: _launchUrl,
-                    child: Text(
-                      '''
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Color.fromRGBO(0, 109, 119, 1)),
+                  onPressed: _launchUrl,
+                  child: Text(
+                    '''
     Natječaj za upis u prvi 
 razred 2022./2023. godine''',
-                      style: GoogleFonts.getFont('Poppins',
-                          fontStyle: FontStyle.normal),
-                    ),
+                    style: GoogleFonts.getFont('Poppins',
+                        fontStyle: FontStyle.normal),
                   ),
                 ),
                 Container(

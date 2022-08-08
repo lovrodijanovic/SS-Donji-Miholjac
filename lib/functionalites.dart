@@ -1,21 +1,22 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'models/functionality.dart';
 
 List<Functionality> functionalities = [
   Functionality(
       'f1',
-      'Opće informacije',
+      '''
+Opće 
+informacije''',
       SvgPicture.asset(
-        'assets/images/high_school.svg',
-        fit: BoxFit.fitHeight,
+        'assets/images/high_school.svg'
       ),
       'aboutSchool'),
   Functionality(
       'f2',
-      'Programi i zanimanja',
-      SvgPicture.asset('assets/images/programi_zanimanja.svg',
-          fit: BoxFit.fitHeight),
+'''
+Programi i
+zanimanja''',
+      SvgPicture.asset('assets/images/programi_zanimanja.svg'),
       'programDescription'),
   Functionality(
       'f3',
@@ -34,12 +35,16 @@ List<Functionality> functionalities = [
       'projects'),
   Functionality(
       'f6',
-      'Učenička zadruga',
+      '''
+Učenička
+zadruga''',
       SvgPicture.asset('assets/images/udruga.svg'),
       'studentAssociation'),
   Functionality(
       'f7',
-      'Upis u prvi razred',
+      '''
+Upis u 
+prvi razred''',
       SvgPicture.asset('assets/images/upisi_u_prvi_razred.svg'),
       'firstGrade'),
   Functionality(
@@ -49,13 +54,20 @@ List<Functionality> functionalities = [
       'lastGrade'),
   Functionality(
       'f9',
-      'Oglasna ploča',
+      '''
+Oglasna 
+ploča''',
       SvgPicture.asset('assets/images/oglasna_ploca.svg'),
       'notifications'),
   Functionality(
       'f10',
-      'Informacije i kontakt, knjižnica',
+      'Knjižnica',
       SvgPicture.asset('assets/images/knjiznica.svg'),
+      'library'),
+  Functionality(
+      'f11',
+      'Kontakt',
+      SvgPicture.asset('assets/images/kontakt.svg'),
       'informationAndContact'),
 ];
 

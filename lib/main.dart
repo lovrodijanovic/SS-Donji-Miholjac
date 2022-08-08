@@ -4,10 +4,10 @@ import 'package:ss_donji_miholjac/appFunctionalities/events.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/first_grade.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/information_and_contact.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/last_grade.dart';
+import 'package:ss_donji_miholjac/appFunctionalities/library.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/notifications.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/program_description.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/student_association.dart';
-import 'package:ss_donji_miholjac/selection_screen.dart';
 import 'package:ss_donji_miholjac/splash.dart';
 import './appFunctionalities/about_school.dart';
 import 'appFunctionalities/projects.dart';
@@ -50,6 +50,7 @@ class MyApp extends StatelessWidget {
           'lastGrade': (context) => LastGrade(),
           'notifications': (context) => Notifications(),
           'informationAndContact': (context) => InformationAndContact(),
+          'library':(context) => Library(),
         });
   }
 }
