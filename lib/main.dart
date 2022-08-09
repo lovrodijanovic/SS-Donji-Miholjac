@@ -14,6 +14,8 @@ import 'appFunctionalities/projects.dart';
 import 'appFunctionalities/scedule.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import 'favourites.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -51,6 +53,7 @@ class MyApp extends StatelessWidget {
           'notifications': (context) => Notifications(),
           'informationAndContact': (context) => InformationAndContact(),
           'library':(context) => Library(),
+          'favourites':(context) => Favourites(),
         });
   }
 }

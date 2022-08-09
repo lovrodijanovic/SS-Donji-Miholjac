@@ -19,9 +19,8 @@ class _SplashState extends State<Splash> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(const Duration(milliseconds: 3000), () {});
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
+    await Future.delayed(const Duration(milliseconds: 3500), () {});
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
   }
 
   @override
@@ -56,16 +55,17 @@ class _SplashState extends State<Splash> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Developed by ',
+                const Icon(Icons.favorite, size: 15,),
+                Text(' Developed by ',
                     style: GoogleFonts.getFont('Poppins',
                         fontWeight: FontWeight.w300,
-                        fontSize: 10,
+                        fontSize: 12,
                         fontStyle: FontStyle.normal)),
                 Text(
                   'Marrow Labs d.o.o.',
                   style: GoogleFonts.getFont('Poppins',
                       fontWeight: FontWeight.bold,
-                      fontSize: 10,
+                      fontSize: 12,
                       fontStyle: FontStyle.normal),
                 ),
               ],

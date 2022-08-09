@@ -33,29 +33,32 @@ class TopSearch extends StatelessWidget {
                           ),
                         ),
                       ),
-                      FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Container(
-                          padding: const EdgeInsets.only(bottom: 30),
-                          child: Column(
-                            children: [
-                              Text(
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 15, left: 30),
+                        child: Column(
+                          children: [
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
                                 'Dobrodošli,',
                                 style: GoogleFonts.getFont('Poppins',
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w500,
                                     fontSize: 20,
                                     fontStyle: FontStyle.normal),
                               ),
-                              Text(
+                            ),
+                            Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
                                 'Srednja škola Donji Miholjac',
                                 style: GoogleFonts.getFont('Poppins',
                                     color: Colors.white,
                                     fontSize: 20,
                                     fontStyle: FontStyle.normal),
-                              )
-                            ],
-                          ),
+                              ),
+                            )
+                          ],
                         ),
                       ),
                       Card(

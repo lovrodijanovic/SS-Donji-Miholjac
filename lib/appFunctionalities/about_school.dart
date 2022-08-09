@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ss_donji_miholjac/functionality_screen.dart';
+import 'package:ss_donji_miholjac/models/textBlock.dart';
 
 class AboutSchool extends StatelessWidget {
   static const String aboutSchool = """
@@ -19,27 +21,7 @@ Današnja Srednja škola Donji Miholjac službeno je registrirana 12. studenog 1
       pageTitle: 'O školi',
       child: ListView(
         children: [
-          Container(
-              padding: const EdgeInsets.all(20),
-              child: Card(
-                  child: Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(bottom: 10, top: 10),
-                    child: const Text(
-                      'Kratka povijest škole',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    child: const Text(
-                      aboutSchool,
-                      style: TextStyle(height: 1.5),
-                    ),
-                  ),
-                ],
-              ))),
+          TextBlock(aboutSchool),
           Container(
             margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
             child: Image.network(
