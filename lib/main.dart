@@ -10,10 +10,10 @@ import 'package:ss_donji_miholjac/appFunctionalities/program_description.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/student_association.dart';
 import 'package:ss_donji_miholjac/splash.dart';
 import './appFunctionalities/about_school.dart';
+import 'all_categories.dart';
 import 'appFunctionalities/projects.dart';
 import 'appFunctionalities/scedule.dart';
 import 'package:hexcolor/hexcolor.dart';
-
 import 'favourites.dart';
 
 void main() {
@@ -54,6 +54,7 @@ class MyApp extends StatelessWidget {
           'informationAndContact': (context) => InformationAndContact(),
           'library':(context) => Library(),
           'favourites':(context) => Favourites(),
+          'allCategories':(context) => AllCategories()
         });
   }
 }
