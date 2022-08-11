@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ss_donji_miholjac/functionality_screen.dart';
+import 'package:ss_donji_miholjac/models/functionality_screen.dart';
 import 'package:ss_donji_miholjac/models/textBlock.dart';
 
 class AboutSchool extends StatelessWidget {

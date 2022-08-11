@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ss_donji_miholjac/functionality_screen.dart';
+import 'package:ss_donji_miholjac/models/functionality_screen.dart';
 import 'package:ss_donji_miholjac/models/myTextButton.dart';
 import 'package:ss_donji_miholjac/models/textBlock.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class StudentAssociation extends StatelessWidget {
-  final String celestinaFacebook = 
+  final String celestinaFacebook =
       'https://www.facebook.com/people/U%C4%8Deni%C4%8Dka-zadruga-Celestina-Srednje-%C5%A1kole-Donji-Miholjac/100057340282677/';
 
   final String studentAssociation = '''
@@ -41,10 +41,13 @@ Za više informacije posjetite facebook stranicu udruge.''';
           TextBlock(studentAssociation),
           Row(
             children: [
-              const Padding(padding: EdgeInsets.only(bottom: 30, left: 30), child: Icon(Icons.facebook)),
+              const Padding(
+                  padding: EdgeInsets.only(bottom: 30, left: 30),
+                  child: Icon(Icons.facebook)),
               Padding(
                 padding: const EdgeInsets.only(bottom: 30),
-                child: MyTextButton("Facebook stranica udruge", celestinaFacebook),
+                child:
+                    MyTextButton("Facebook stranica udruge", celestinaFacebook),
               ),
             ],
           ),
@@ -59,5 +62,3 @@ Za više informacije posjetite facebook stranicu udruge.''';
     );
   }
 }
-
-
