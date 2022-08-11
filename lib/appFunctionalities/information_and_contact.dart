@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ss_donji_miholjac/models/myTextButton.dart';
-import 'package:ss_donji_miholjac/models/textBlock.dart';
-import '../functionality_screen.dart';
+import 'package:ss_donji_miholjac/models/my_text_button.dart';
+import 'package:ss_donji_miholjac/models/text_block.dart';
+import '../widgets/functionality_screen.dart';
 
 class InformationAndContact extends StatelessWidget {
 
@@ -24,6 +24,8 @@ OIB: 04017904699
 WEB: www.ss-donji-miholjac.skole.hr
 E-MAIL: ured@ss-donji-miholjac.skole.hr''';
 
+  const InformationAndContact({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return FunctionalityScreen(
@@ -35,11 +37,6 @@ E-MAIL: ured@ss-donji-miholjac.skole.hr''';
                 SizedBox(width: double.infinity, child: TextBlock(info)),
                 MyTextButton("Link na web stranicu škole", webAdress),
                 MyTextButton("Naša lokacija na Google Maps", location),
-                Container(
-                  margin: const EdgeInsets.all(20),
-                  child: Image.network(
-                      'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/29/Image/lokacija%20skole2.jpg'),
-                ),
               ],
             ),
           ],

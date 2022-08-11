@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ss_donji_miholjac/models/functionality.dart';
-import '../functionality_item.dart';
+import '../widgets/functionality_item.dart';
 
 class CategoryGrid extends StatelessWidget {
   final List<Functionality> shownFunctionalities;
-  CategoryGrid(this.shownFunctionalities);
+  const CategoryGrid(this.shownFunctionalities);
 
   @override
   Widget build(BuildContext context) {

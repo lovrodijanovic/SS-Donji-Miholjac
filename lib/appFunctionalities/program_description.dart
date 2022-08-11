@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ss_donji_miholjac/functionality_screen.dart';
-import 'package:ss_donji_miholjac/models/myTextButton.dart';
-import 'package:ss_donji_miholjac/models/textBlock.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ss_donji_miholjac/widgets/functionality_screen.dart';
+import 'package:ss_donji_miholjac/models/my_text_button.dart';
+import 'package:ss_donji_miholjac/models/text_block.dart';
 
 class ProgramDescription extends StatelessWidget {
 
@@ -19,6 +18,8 @@ class ProgramDescription extends StatelessWidget {
   final String cncOperater = 'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/CNC%20operater.pdf';
   final String automehanicar = 'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Automehani%C4%8Dar%20JMO.pdf';
   final String strojobravar = 'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Strojobravar%20JMO.pdf';
+
+  const ProgramDescription({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

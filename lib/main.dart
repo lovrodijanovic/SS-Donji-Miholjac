@@ -8,13 +8,13 @@ import 'package:ss_donji_miholjac/appFunctionalities/library.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/notifications.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/program_description.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/student_association.dart';
-import 'package:ss_donji_miholjac/splash.dart';
+import 'package:ss_donji_miholjac/widgets/splash.dart';
 import './appFunctionalities/about_school.dart';
-import 'all_categories.dart';
+import 'widgets/all_categories.dart';
 import 'appFunctionalities/projects.dart';
 import 'appFunctionalities/scedule.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'favourites.dart';
+import 'widgets/favourites.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,16 +42,16 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         routes: {
           '/': (context) => const Splash(),
-          'aboutSchool': (context) => AboutSchool(),
-          'programDescription': (context) => ProgramDescription(),
-          'scedule': (context) => Scedule(),
-          'events': (context) => Events(),
-          'projects': (context) => Projects(),
-          'studentAssociation': (context) => StudentAssociation(),
-          'firstGrade': (context) => FirstGrade(),
-          'lastGrade': (context) => LastGrade(),
-          'notifications': (context) => Notifications(),
-          'informationAndContact': (context) => InformationAndContact(),
+          'aboutSchool': (context) => const AboutSchool(),
+          'programDescription': (context) => const ProgramDescription(),
+          'scedule': (context) => const Scedule(),
+          'events': (context) => const Events(),
+          'projects': (context) => const Projects(),
+          'studentAssociation': (context) => const StudentAssociation(),
+          'firstGrade': (context) => const FirstGrade(),
+          'lastGrade': (context) => const LastGrade(),
+          'notifications': (context) => const Notifications(),
+          'informationAndContact': (context) => const InformationAndContact(),
           'library':(context) => Library(),
           'favourites':(context) => Favourites(),
           'allCategories':(context) => AllCategories()

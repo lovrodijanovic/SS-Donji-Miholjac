@@ -1,5 +1,5 @@
 import 'package:flutter_svg/flutter_svg.dart';
-import 'models/functionality.dart';
+import 'functionality.dart';
 
 List<Functionality> functionalities = [
   Functionality(
