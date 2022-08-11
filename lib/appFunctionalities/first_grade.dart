@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ss_donji_miholjac/models/functionality_screen.dart';
-import 'package:ss_donji_miholjac/models/myTextButton.dart';
-import 'package:ss_donji_miholjac/models/textBlock.dart';
+import 'package:ss_donji_miholjac/models/my_text_button.dart';
+import 'package:ss_donji_miholjac/models/text_block.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../models/functionality_screen.dart';
 
 class FirstGrade extends StatelessWidget {
   final String _url_2022_2023 =
@@ -20,6 +21,8 @@ class FirstGrade extends StatelessWidget {
       'http://www.ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/static3/1965/File/Natjecaj_za_upis_u_sk._godinu_2022-2023.pdf';
   final String _url_2016_2017 =
       'http://www.ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/static3/1965/File/Natjecaj_za_upis_u_sk._godinu_2022-2023.pdf';
+
+  const FirstGrade({Key? key}) : super(key: key);
 
   Future<void> _launchUrl() async {
     if (!await launchUrl(Uri.parse(_url_2022_2023))) {

@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/category_grid.dart';
-import 'package:ss_donji_miholjac/models/myTextButton.dart';
-import 'package:ss_donji_miholjac/topSearch.dart';
-import './functionality_item.dart';
-import 'models/functionality.dart';
+import 'package:ss_donji_miholjac/widgets/top_search.dart';
+import '../models/functionality.dart';
 
 class SelectionScreen extends StatelessWidget {
   final String gridTitle;
@@ -52,7 +50,6 @@ class SelectionScreen extends StatelessWidget {
                           ),
                   )
                 ],)
-            
               ],
             ),
           ),

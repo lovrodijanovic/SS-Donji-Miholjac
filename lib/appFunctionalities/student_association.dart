@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:ss_donji_miholjac/models/functionality_screen.dart';
-import 'package:ss_donji_miholjac/models/myTextButton.dart';
-import 'package:ss_donji_miholjac/models/textBlock.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ss_donji_miholjac/models/my_text_button.dart';
+import 'package:ss_donji_miholjac/models/text_block.dart';
+import '../models/functionality_screen.dart';
 
 class StudentAssociation extends StatelessWidget {
   final String celestinaFacebook =
@@ -32,6 +30,8 @@ Kulturološko-umjetničke: Zvonimir Falamić, prof.povijesti
 Kreativa: Sandra Matković, dipl.oec.
 
 Za više informacije posjetite facebook stranicu udruge.''';
+
+  const StudentAssociation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return FunctionalityScreen(

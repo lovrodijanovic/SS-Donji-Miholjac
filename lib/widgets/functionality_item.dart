@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:ss_donji_miholjac/functionalites.dart';
+import 'package:ss_donji_miholjac/models/functionalites.dart';
 
 
 class FunctionalityItem extends StatefulWidget {

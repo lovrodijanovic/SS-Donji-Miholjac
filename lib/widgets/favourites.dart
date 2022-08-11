@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ss_donji_miholjac/functionalites.dart';
+import 'package:ss_donji_miholjac/models/functionalites.dart';
 import 'package:ss_donji_miholjac/models/category_grid.dart';
-import 'models/functionality_screen.dart';
+import '../models/functionality_screen.dart';
 import 'functionality_item.dart';
 
 class Favourites extends StatelessWidget {

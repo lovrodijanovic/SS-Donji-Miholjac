@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
-import 'package:ss_donji_miholjac/functionalites.dart';
-import 'package:ss_donji_miholjac/selection_screen.dart';
+import 'package:ss_donji_miholjac/models/functionalites.dart';
+import 'package:ss_donji_miholjac/widgets/selection_screen.dart';
 
-import 'models/functionality.dart';
+import '../models/functionality.dart';
 
 class MyNavigationBar extends StatefulWidget {
   final List<Functionality> highlightedFunctionalities = [

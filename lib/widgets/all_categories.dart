@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:ss_donji_miholjac/models/functionality_screen.dart';
 import 'package:ss_donji_miholjac/models/category_grid.dart';
-import 'functionalites.dart';
-import 'models/functionality.dart';
+import '../models/functionality_screen.dart';
+import 'functionality_item.dart';
+import '../models/functionalites.dart';
+import '../models/functionality.dart';
 
 class AllCategories extends StatelessWidget {
   final List<Functionality> allCategories = [

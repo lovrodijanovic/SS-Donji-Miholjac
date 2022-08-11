@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975366205344",
+    "project_id": "ss-donji-miholjac",
+    "storage_bucket": "ss-donji-miholjac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975366205344:android:4e671a4ddfab5250d2bec5",
+        "android_client_info": {
+          "package_name": "com.example.ss_donji_miholjac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975366205344-0s8d48qnhfsmq1db4444n75362pi5054.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQi7h1ZD607qotJBTikBJQKwAX48c6Big"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975366205344-0s8d48qnhfsmq1db4444n75362pi5054.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

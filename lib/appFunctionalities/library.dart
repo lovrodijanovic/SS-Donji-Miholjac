@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../models/functionality_screen.dart';
 
 class Library extends StatelessWidget {
   final Uri library = Uri.parse(
       'https://sites.google.com/view/virtualnasdm/po%C4%8Detna-stranica');
+
+  Library({Key? key}) : super(key: key);
 
   Future<void> _launchUrl() async {
     if (!await launchUrl(library)) {
@@ -34,6 +35,7 @@ PONEDJELJAK, SRIJEDA: 13,00 - 19,00
 UTORAK, ČETVRTAK, PETAK: 7,00 - 13,00
 
 Za sve ostale informacije posjetite web stranicu knjižnice klikom na gumb ispod.''',
+<<<<<<< HEAD
                     style: GoogleFonts.getFont('Poppins',
                         fontStyle: FontStyle.normal),
                   ),
@@ -46,6 +48,21 @@ Za sve ostale informacije posjetite web stranicu knjižnice klikom na gumb ispod
                 'Web stranica knjižnice',
                 style:
                     GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal),
+=======
+                        style: GoogleFonts.getFont('Poppins',
+                            fontStyle: FontStyle.normal),
+                      ),
+                    ))),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: const Color.fromRGBO(0, 109, 119, 1)),
+                onPressed: _launchUrl,
+                child: Text(
+                  'Web stranica knjižnice',
+                  style: GoogleFonts.getFont('Poppins',
+                    fontStyle: FontStyle.normal),
+                ),
+>>>>>>> 29f95e458fe7ae97d839d86676f088966944383e
               ),
             ),
           ],
