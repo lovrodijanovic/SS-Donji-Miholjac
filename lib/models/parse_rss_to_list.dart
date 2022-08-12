@@ -53,7 +53,6 @@ class ParseRssToList extends StatelessWidget {
 
     Future fetchNews() async {
       final response = await http.get(rssUrl);
-
       if (response.statusCode == 200) {
         var decoded = RssFeed.parse(response.body);
         return decoded.items
@@ -62,8 +61,7 @@ class ParseRssToList extends StatelessWidget {
           description: item.description,
           link: item.link,
           pubDate: item.pubDate
-        ))
-            .toList();
+        )).toList();
       } else {
         throw const HttpException('Failed to fetch the data');
       }

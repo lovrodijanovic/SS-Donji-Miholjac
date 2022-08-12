@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/about_school.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/events.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/first_grade.dart';
@@ -8,6 +9,14 @@ import 'package:ss_donji_miholjac/appFunctionalities/library.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/notifications.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/program_description.dart';
 import 'package:ss_donji_miholjac/appFunctionalities/student_association.dart';
+import 'package:ss_donji_miholjac/projects/digitalni_casopis_aktiva_trgovine.dart';
+import 'package:ss_donji_miholjac/projects/eTwinning.dart';
+import 'package:ss_donji_miholjac/projects/epas_skola.dart';
+import 'package:ss_donji_miholjac/projects/financijska_pismenost.dart';
+import 'package:ss_donji_miholjac/projects/medunarodna_suradnja.dart';
+import 'package:ss_donji_miholjac/projects/program_potpore_napredovanju.dart';
+import 'package:ss_donji_miholjac/projects/skolske_pcele_medarice.dart';
+import 'package:ss_donji_miholjac/projects/volonteri.dart';
 import 'package:ss_donji_miholjac/widgets/splash.dart';
 import './appFunctionalities/about_school.dart';
 import 'widgets/all_categories.dart';
@@ -17,6 +26,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'widgets/favourites.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
@@ -48,13 +59,21 @@ class MyApp extends StatelessWidget {
           'events': (context) => const Events(),
           'projects': (context) => const Projects(),
           'studentAssociation': (context) => const StudentAssociation(),
-          'firstGrade': (context) => const FirstGrade(),
+          'firstGrade': (context) => FirstGrade(),
           'lastGrade': (context) => const LastGrade(),
           'notifications': (context) => const Notifications(),
           'informationAndContact': (context) => const InformationAndContact(),
           'library':(context) => Library(),
           'favourites':(context) => Favourites(),
-          'allCategories':(context) => AllCategories()
+          'allCategories':(context) => AllCategories(),
+          'epas': (context) => const EpasSkola(),
+          'eTwinning': (context) => const ETwinning(),
+          'financialLiteracy': (context) => FinancialLiteracy(),
+          'digitalMagazine': (context) => const DigitalMagazine(),
+          'volunteers': (context) => const Volunteers(),
+          'advancementSupportProgram': (context) => const AdvancementSupportProgram(),
+          'schoolBees': (context) => const SchoolBees(),
+          'internationalCooperation': (context) => const InternationalCooperation(),
         });
   }
 }

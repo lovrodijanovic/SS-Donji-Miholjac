@@ -34,7 +34,7 @@ class TopSearch extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(bottom: 15, left: 30),
+                        padding: const EdgeInsets.only(bottom: 50, left: 30),
                         child: Column(
                           children: [
                             Align(
@@ -61,7 +61,7 @@ class TopSearch extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Card(
+                      /*Card(
                         margin: const EdgeInsets.all(20),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -79,7 +79,7 @@ class TopSearch extends StatelessWidget {
                             )
                             )
                           ),
-                      ),
+                      ),*/
                     ],
                   ),
                 )),

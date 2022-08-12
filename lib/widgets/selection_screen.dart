@@ -18,11 +18,11 @@ class SelectionScreen extends StatelessWidget {
       body: Column(
         children: [
           TopSearch(),
-          SizedBox(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Padding(
                   padding: const EdgeInsets.only(left: 15, top:30),
                   child: Align(
                       child: Text(gridTitle,
@@ -31,27 +31,28 @@ class SelectionScreen extends StatelessWidget {
                               fontSize: 20,
                               fontStyle: FontStyle.normal))),
                 ),
-                Row(
-                  children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top:30),
-                    child: TextButton(onPressed: () { Navigator.pushNamed(context, 'allCategories'); },
-                      child: Text(
-                          'Prikaži sve',
-                          style: GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal, color: HexColor('#006D77')),
-                  ),)
-                  ),
-                  Padding(padding: const EdgeInsets.only(top: 30),
-                    child: IconButton(
-                            onPressed:() {
-                              Navigator.pushNamed(context, 'favourites');
-                            }, 
-                            icon: Icon(Icons.favorite, color: HexColor('#006D77'))
-                          ),
-                  )
-                ],)
-              ],
-            ),
+              ),
+              Row(
+                children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: TextButton(onPressed: () { Navigator.pushNamed(context, 'allCategories'); },
+                    child: Text(
+                        'Prikaži sve',
+                        style: GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal, color: HexColor('#006D77')),
+                  ),),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30),
+                  child: IconButton(
+                          onPressed:() {
+                            Navigator.pushNamed(context, 'favourites');
+                          }, 
+                          icon: Icon(Icons.favorite, color: HexColor('#006D77'))
+                        ),
+                )
+              ],)
+            ],
           ),
           CategoryGrid(shownFunctionalities)
         ],

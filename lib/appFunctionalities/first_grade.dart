@@ -22,11 +22,13 @@ class FirstGrade extends StatelessWidget {
   final String _url_2016_2017 =
       'http://www.ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/static3/1965/File/Natjecaj_za_upis_u_sk._godinu_2022-2023.pdf';
 
-  const FirstGrade({Key? key}) : super(key: key);
 
-  Future<void> _launchUrl() async {
-    if (!await launchUrl(Uri.parse(_url_2022_2023))) {
-      throw 'Could not launch $_url_2022_2023';
+  String url = "http://www.ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/static3/1965/File/Natjecaj_za_upis_u_sk._godinu_2022-2023.pdf";
+  _launchURLBrowser() async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
     }
   }
 
@@ -43,7 +45,7 @@ class FirstGrade extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: const Color.fromRGBO(0, 109, 119, 1)),
-                  onPressed: _launchUrl,
+                  onPressed: _launchURLBrowser,
                   child: Text(
                     '''
     Natječaj za upis u prvi 
