@@ -7,19 +7,7 @@ import '../models/functionalites.dart';
 import '../models/functionality.dart';
 
 class AllCategories extends StatelessWidget {
-  final List<Functionality> allCategories = [
-    functionalities.elementAt(0),
-    functionalities.elementAt(1),
-    functionalities.elementAt(2),
-    functionalities.elementAt(3),
-    functionalities.elementAt(4),
-    functionalities.elementAt(5),
-    functionalities.elementAt(6),
-    functionalities.elementAt(7),
-    functionalities.elementAt(8),
-    functionalities.elementAt(9),
-    functionalities.elementAt(10),
-  ];
+  AllCategories({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +40,7 @@ class AllCategories extends StatelessWidget {
                   )
                 ],
               ),
-              CategoryGrid(allCategories),
+              CategoryGrid(functionalities),
             ],
           ),
         ));

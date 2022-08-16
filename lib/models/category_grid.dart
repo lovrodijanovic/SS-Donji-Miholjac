@@ -10,9 +10,10 @@ class CategoryGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: GridView(
-        padding: const EdgeInsets.all(30),
+        padding:
+            const EdgeInsets.only(bottom: 30, left: 30, right: 30, top: 15),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-          crossAxisSpacing: 30,
+          crossAxisSpacing: 20,
           mainAxisSpacing: 30,
           maxCrossAxisExtent: 200,
         ),
