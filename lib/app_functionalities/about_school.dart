@@ -27,9 +27,14 @@ Današnja Srednja škola Donji Miholjac službeno je registrirana 12. studenog 1
                 'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/24/Image/celestina.jpg'),
           ),
           Container(
-            margin: const EdgeInsets.only(left: 20, right: 20),
+            margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
             child: Image.network(
                 'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/24/Image/naslovnica.JPG'),
+          ),
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: Image.network(
+                'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/newsimg/1763/Image/viber_slika_2022-06-13_21-45-17-461.jpg'),
           )
         ],
       ),

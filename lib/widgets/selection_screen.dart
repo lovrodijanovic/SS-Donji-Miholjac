@@ -8,9 +8,10 @@ import '../models/functionality.dart';
 class SelectionScreen extends StatelessWidget {
   final String gridTitle;
   final List<Functionality> shownFunctionalities;
-  
-  const SelectionScreen({required this.gridTitle, required this.shownFunctionalities});
-  
+
+  const SelectionScreen(
+      {required this.gridTitle, required this.shownFunctionalities});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,40 +19,42 @@ class SelectionScreen extends StatelessWidget {
       body: Column(
         children: [
           TopSearch(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Wrap(
+            alignment: WrapAlignment.spaceBetween,
             children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 15, top:30),
-                  child: Align(
-                      child: Text(gridTitle,
-                          style: GoogleFonts.getFont('Poppins',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 20,
-                              fontStyle: FontStyle.normal))),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, top: 30),
+                child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(gridTitle,
+                        style: GoogleFonts.getFont('Poppins',
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            fontStyle: FontStyle.normal))),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, top: 30),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'allCategories');
+                  },
+                  child: Text(
+                    'Prikaži sve',
+                    style: GoogleFonts.getFont('Poppins',
+                        fontStyle: FontStyle.normal,
+                        color: HexColor('#006D77'),
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
-              Row(
-                children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: TextButton(onPressed: () { Navigator.pushNamed(context, 'allCategories'); },
-                    child: Text(
-                        'Prikaži sve',
-                        style: GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal, color: HexColor('#006D77')),
-                  ),),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: IconButton(
-                          onPressed:() {
-                            Navigator.pushNamed(context, 'favourites');
-                          }, 
-                          icon: Icon(Icons.favorite, color: HexColor('#006D77'))
-                        ),
-                )
-              ],)
+              Padding(
+                padding: const EdgeInsets.only(right: 20, top: 30),
+                child: IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'favourites');
+                    },
+                    icon: Icon(Icons.favorite, color: HexColor('#006D77'))),
+              )
             ],
           ),
           CategoryGrid(shownFunctionalities)

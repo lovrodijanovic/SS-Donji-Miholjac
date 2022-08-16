@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ss_donji_miholjac/models/parse_rss_to_list.dart';
-
 import '../models/functionality_screen.dart';
 
 class Notifications extends StatelessWidget {

@@ -4,64 +4,61 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class TopSearch extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-            padding:
-                EdgeInsets.only(top: MediaQuery.of(context).viewPadding.top),
-            child: Card(
-                shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(45))),
-                color: HexColor('#006D77'),
-                child: SizedBox(
-                  width: double.infinity,
+      padding: EdgeInsets.only(top: MediaQuery.of(context).viewPadding.top),
+      child: Card(
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(45))),
+          color: HexColor('#006D77'),
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              children: [
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: IconButton(
+                    padding: const EdgeInsets.only(right: 20, top: 20),
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'informationAndContact');
+                    },
+                    icon: const Icon(
+                      PhosphorIcons.info,
+                      size: 25,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(bottom: 50, left: 30),
                   child: Column(
                     children: [
                       Align(
-                        alignment: Alignment.centerRight,
-                        child: IconButton(
-                          padding: const EdgeInsets.only(right: 20, top: 20),
-                          onPressed: () {
-                            Navigator.pushNamed(
-                                context, 'informationAndContact');
-                          },
-                          icon: const Icon(
-                            PhosphorIcons.info,
-                            size: 25,
-                            color: Colors.white,
-                          ),
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Dobrodošli,',
+                          style: GoogleFonts.getFont('Poppins',
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                              fontStyle: FontStyle.normal),
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(bottom: 50, left: 30),
-                        child: Column(
-                          children: [
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                'Dobrodošli,',
-                                style: GoogleFonts.getFont('Poppins',
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 20,
-                                    fontStyle: FontStyle.normal),
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                'Srednja škola Donji Miholjac',
-                                style: GoogleFonts.getFont('Poppins',
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontStyle: FontStyle.normal),
-                              ),
-                            )
-                          ],
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Srednja škola Donji Miholjac',
+                          style: GoogleFonts.getFont('Poppins',
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontStyle: FontStyle.normal),
                         ),
-                      ),
-                      /*Card(
+                      )
+                    ],
+                  ),
+                ),
+                /*Card(
                         margin: const EdgeInsets.all(20),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -80,9 +77,9 @@ class TopSearch extends StatelessWidget {
                             )
                           ),
                       ),*/
-                    ],
-                  ),
-                )),
-          );
+              ],
+            ),
+          )),
+    );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ss_donji_miholjac/models/my_text_button.dart';
 import 'package:ss_donji_miholjac/models/text_block.dart';
-
 import '../models/functionality_screen.dart';
 
 class InformationAndContact extends StatelessWidget {

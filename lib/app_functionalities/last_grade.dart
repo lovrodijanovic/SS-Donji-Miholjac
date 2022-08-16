@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../models/functionality_screen.dart';
 
 class LastGrade extends StatelessWidget {

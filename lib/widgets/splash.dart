@@ -20,7 +20,8 @@ class _SplashState extends State<Splash> {
 
   _navigatetohome() async {
     await Future.delayed(const Duration(milliseconds: 3500), () {});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
   }
 
   @override
@@ -55,7 +56,10 @@ class _SplashState extends State<Splash> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.favorite, size: 15,),
+                const Icon(
+                  Icons.favorite,
+                  size: 15,
+                ),
                 Text(' Developed by ',
                     style: GoogleFonts.getFont('Poppins',
                         fontWeight: FontWeight.w300,

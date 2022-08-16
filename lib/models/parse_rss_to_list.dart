@@ -17,54 +17,62 @@ class ParseRssToList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-            Expanded(
-              child: FutureBuilder(
-                    future: fetchNews(),
-                    builder: (context, snap) {
-                      if (snap.hasData) {
-                        final List news = snap.data as List;
-                        return ListView.separated(
-                          padding: const EdgeInsets.only(top: 10),
-                          itemBuilder: (context, i) {
-                            final NotificationModel item = news[i];
-                            return ListTile(
-                              title: Text('${item.title}'),
-                              subtitle: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Align(alignment: Alignment.bottomRight, child: Text(formatter!.format(item.pubDate!))), Align(alignment: Alignment.bottomRight, child: MyTextButton(title, item.link!))])
-                            );
-                          },
-                          separatorBuilder: (context, i) => const Divider(),
-                          itemCount: news.length,
-                        );
-                      } else if (snap.hasError) {
-                        return Center(
-                          child: Text(snap.error.toString()),
-                        );
-                      } else {
-                        return const Center(
-                          child: CircularProgressIndicator(),
-                        );
-                      }
-                    },
-              ),
-            ), 
-          ],
+        Expanded(
+          child: FutureBuilder(
+            future: fetchNews(),
+            builder: (context, snap) {
+              if (snap.hasData) {
+                final List news = snap.data as List;
+                return ListView.separated(
+                  padding: const EdgeInsets.only(top: 10),
+                  itemBuilder: (context, i) {
+                    final NotificationModel item = news[i];
+                    return ListTile(
+                        title: Text('${item.title}'),
+                        subtitle: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Align(
+                                  alignment: Alignment.bottomRight,
+                                  child:
+                                      Text(formatter!.format(item.pubDate!))),
+                              Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: MyTextButton(title, item.link!))
+                            ]));
+                  },
+                  separatorBuilder: (context, i) => const Divider(),
+                  itemCount: news.length,
+                );
+              } else if (snap.hasError) {
+                return Center(
+                  child: Text(snap.error.toString()),
+                );
+              } else {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            },
+          ),
+        ),
+      ],
     );
-    }
+  }
 
-    Future fetchNews() async {
-      final response = await http.get(rssUrl);
-      if (response.statusCode == 200) {
-        var decoded = RssFeed.parse(response.body);
-        return decoded.items
-            ?.map((item) => NotificationModel(
-          title: item.title,
-          description: item.description,
-          link: item.link,
-          pubDate: item.pubDate
-        )).toList();
-      } else {
-        throw const HttpException('Failed to fetch the data');
-      }
+  Future fetchNews() async {
+    final response = await http.get(rssUrl);
+    if (response.statusCode == 200) {
+      var decoded = RssFeed.parse(response.body);
+      return decoded.items
+          ?.map((item) => NotificationModel(
+              title: item.title,
+              description: item.description,
+              link: item.link,
+              pubDate: item.pubDate))
+          .toList();
+    } else {
+      throw const HttpException('Failed to fetch the data');
     }
+  }
 }
-

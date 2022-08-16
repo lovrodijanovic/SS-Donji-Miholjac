@@ -41,12 +41,20 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    SelectionScreen(gridTitle: 'Istraži istaknute kategorije', shownFunctionalities: MyNavigationBar().highlightedFunctionalities),
-    SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().studentFunctionalities),
-    SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().parentFunctionalities),
-    SelectionScreen(gridTitle: 'Istraži kategorije', shownFunctionalities: MyNavigationBar().schoolFunctionalities),
+    SelectionScreen(
+        gridTitle: 'Istraži istaknute kategorije',
+        shownFunctionalities: MyNavigationBar().highlightedFunctionalities),
+    SelectionScreen(
+        gridTitle: 'Istraži kategorije',
+        shownFunctionalities: MyNavigationBar().studentFunctionalities),
+    SelectionScreen(
+        gridTitle: 'Istraži kategorije',
+        shownFunctionalities: MyNavigationBar().parentFunctionalities),
+    SelectionScreen(
+        gridTitle: 'Istraži kategorije',
+        shownFunctionalities: MyNavigationBar().schoolFunctionalities),
   ];
-  
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;

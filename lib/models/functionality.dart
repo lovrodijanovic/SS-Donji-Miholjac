@@ -6,10 +6,5 @@ class Functionality {
   final SvgPicture image;
   final String route;
 
-  const Functionality(
-    this.id,
-    this.title,
-    this.image,
-    this.route
-  );
+  const Functionality(this.id, this.title, this.image, this.route);
 }

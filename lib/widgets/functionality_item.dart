@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/functionalites.dart';
 
-
 class FunctionalityItem extends StatefulWidget {
   final String id;
   final String title;
@@ -21,8 +20,10 @@ class FunctionalityItem extends StatefulWidget {
 
 class _FunctionalityItemState extends State<FunctionalityItem> {
   bool isInFavouritesPage() {
-    return favouriteFunctionalities.contains(functionalities[functionalities.indexWhere((element) => element.id == widget.id)]);
+    return favouriteFunctionalities.contains(functionalities[
+        functionalities.indexWhere((element) => element.id == widget.id)]);
   }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -32,11 +33,20 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
       },
       splashColor: Theme.of(context).primaryColor,
       child: ConstrainedBox(
-        constraints: const BoxConstraints(minWidth: double.infinity,),
+        constraints: const BoxConstraints(
+          minWidth: double.infinity,
+        ),
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(15), 
-            boxShadow: [BoxShadow(spreadRadius: 0.1, blurRadius: 1, color: Colors.grey.withOpacity(0.6), offset: const Offset(0, 5)),]),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: [
+                  BoxShadow(
+                      spreadRadius: 0.1,
+                      blurRadius: 1,
+                      color: Colors.grey.withOpacity(0.6),
+                      offset: const Offset(0, 5)),
+                ]),
             child: FittedBox(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -61,19 +71,28 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                           ),
                         ),
                         IconButton(
-                          onPressed: isInFavouritesPage() ? () {
-                            setState( () {
-                              favouriteFunctionalities.remove(functionalities[functionalities.indexWhere((element) => element.id == widget.id)]);                       
-                            });
-                          } : () {
-                            setState( () {
-                              favouriteFunctionalities.add(functionalities[functionalities.indexWhere((element) => element.id == widget.id)]);                       
-                            }
-                            );
-                          },
-                          icon: isInFavouritesPage() ? Icon(Icons.favorite, color:HexColor('#006D77')) : Icon(Icons.favorite_border, color: HexColor('#006D77'))
-                          
-                        )
+                            onPressed: isInFavouritesPage()
+                                ? () {
+                                    setState(() {
+                                      favouriteFunctionalities.remove(
+                                          functionalities[functionalities
+                                              .indexWhere((element) =>
+                                                  element.id == widget.id)]);
+                                    });
+                                  }
+                                : () {
+                                    setState(() {
+                                      favouriteFunctionalities.add(
+                                          functionalities[functionalities
+                                              .indexWhere((element) =>
+                                                  element.id == widget.id)]);
+                                    });
+                                  },
+                            icon: isInFavouritesPage()
+                                ? Icon(Icons.favorite,
+                                    color: HexColor('#006D77'))
+                                : Icon(Icons.favorite_border,
+                                    color: HexColor('#006D77')))
                       ],
                     ),
                   ),
@@ -84,4 +103,3 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
     );
   }
 }
-

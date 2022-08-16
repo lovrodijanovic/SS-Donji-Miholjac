@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/category_grid.dart';
 import '../models/functionality_screen.dart';
-import 'functionality_item.dart';
 import '../models/functionalites.dart';
 import '../models/functionality.dart';
 

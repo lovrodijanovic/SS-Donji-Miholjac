@@ -6,7 +6,8 @@ import 'package:ss_donji_miholjac/models/text_block.dart';
 class ETwinning extends StatelessWidget {
   const ETwinning({Key? key}) : super(key: key);
 
-  final String eTwinningText = '''Najveća online zajednica škola u Europi, s više od 552600 registriranih djelatnika iz 189 784 vrtića i škola. eTwinning je jedna od aktivnosti programa Erasmus+. http://www.etwinning.net je portal namjenjen međunarodnoj suradnji i usavršavanju kako nastavnog tako i nenastavnog osoblja od vrtića, preko osnovnih pa sve do srednjih škola.   Ovaj portal služi nastavnicima i njihovim učenicima za upoznavanje i suradnju s kolegama iz europskih škola, a kroz eTwinning + i šire, kroz različite oblike usavršavanja te radu na međunarodnim, ali i nacionalnim virtualnim projektima.    
+  final String eTwinningText =
+      '''Najveća online zajednica škola u Europi, s više od 552600 registriranih djelatnika iz 189 784 vrtića i škola. eTwinning je jedna od aktivnosti programa Erasmus+. http://www.etwinning.net je portal namjenjen međunarodnoj suradnji i usavršavanju kako nastavnog tako i nenastavnog osoblja od vrtića, preko osnovnih pa sve do srednjih škola.   Ovaj portal služi nastavnicima i njihovim učenicima za upoznavanje i suradnju s kolegama iz europskih škola, a kroz eTwinning + i šire, kroz različite oblike usavršavanja te radu na međunarodnim, ali i nacionalnim virtualnim projektima.    
 
 
 Zašto eTwinning? – Prednosti
@@ -27,11 +28,17 @@ To su iskusni eTwinneri koji pružaju pomoć i podršku novim i svim ostalim eTw
 
   @override
   Widget build(BuildContext context) {
-    return FunctionalityScreen(pageTitle: 'eTwinning', child: ListView(children: [
-      TextBlock(eTwinningText),
-      const MyTextButton('eTwinning ambasadori', 'https://www.etwinning.hr/hr/sadrzaj/o-nama/etwinningovi-ambasadori'),
-      const MyTextButton('eTwinning registracija', 'https://www.etwinning.net/hr/pub/index.htm'),
-      const MyTextButton('eTwinning Hrvatska', 'https://www.etwinning.hr'),
-    ],));
+    return FunctionalityScreen(
+        pageTitle: 'eTwinning',
+        child: ListView(
+          children: [
+            TextBlock(eTwinningText),
+            MyTextButton('eTwinning ambasadori',
+                'https://www.etwinning.hr/hr/sadrzaj/o-nama/etwinningovi-ambasadori'),
+            MyTextButton('eTwinning registracija',
+                'https://www.etwinning.net/hr/pub/index.htm'),
+            MyTextButton('eTwinning Hrvatska', 'https://www.etwinning.hr'),
+          ],
+        ));
   }
 }

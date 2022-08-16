@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/about_school.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/events.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/first_grade.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/information_and_contact.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/last_grade.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/library.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/notifications.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/program_description.dart';
-import 'package:ss_donji_miholjac/appFunctionalities/student_association.dart';
+import 'package:ss_donji_miholjac/app_functionalities/about_school.dart';
+import 'package:ss_donji_miholjac/app_functionalities/events.dart';
+import 'package:ss_donji_miholjac/app_functionalities/first_grade.dart';
+import 'package:ss_donji_miholjac/app_functionalities/information_and_contact.dart';
+import 'package:ss_donji_miholjac/app_functionalities/last_grade.dart';
+import 'package:ss_donji_miholjac/app_functionalities/library.dart';
+import 'package:ss_donji_miholjac/app_functionalities/notifications.dart';
+import 'package:ss_donji_miholjac/app_functionalities/program_description.dart';
+import 'package:ss_donji_miholjac/app_functionalities/student_association.dart';
 import 'package:ss_donji_miholjac/projects/digitalni_casopis_aktiva_trgovine.dart';
 import 'package:ss_donji_miholjac/projects/eTwinning.dart';
 import 'package:ss_donji_miholjac/projects/epas_skola.dart';
@@ -18,10 +18,10 @@ import 'package:ss_donji_miholjac/projects/program_potpore_napredovanju.dart';
 import 'package:ss_donji_miholjac/projects/skolske_pcele_medarice.dart';
 import 'package:ss_donji_miholjac/projects/volonteri.dart';
 import 'package:ss_donji_miholjac/widgets/splash.dart';
-import './appFunctionalities/about_school.dart';
+import './app_functionalities/about_school.dart';
 import 'widgets/all_categories.dart';
-import 'appFunctionalities/projects.dart';
-import 'appFunctionalities/scedule.dart';
+import 'app_functionalities/projects.dart';
+import 'app_functionalities/scedule.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'widgets/favourites.dart';
 
@@ -63,17 +63,19 @@ class MyApp extends StatelessWidget {
           'lastGrade': (context) => const LastGrade(),
           'notifications': (context) => const Notifications(),
           'informationAndContact': (context) => const InformationAndContact(),
-          'library':(context) => Library(),
-          'favourites':(context) => Favourites(),
-          'allCategories':(context) => AllCategories(),
+          'library': (context) => Library(),
+          'favourites': (context) => Favourites(),
+          'allCategories': (context) => AllCategories(),
           'epas': (context) => const EpasSkola(),
           'eTwinning': (context) => const ETwinning(),
           'financialLiteracy': (context) => FinancialLiteracy(),
           'digitalMagazine': (context) => const DigitalMagazine(),
           'volunteers': (context) => const Volunteers(),
-          'advancementSupportProgram': (context) => const AdvancementSupportProgram(),
+          'advancementSupportProgram': (context) =>
+              const AdvancementSupportProgram(),
           'schoolBees': (context) => const SchoolBees(),
-          'internationalCooperation': (context) => const InternationalCooperation(),
+          'internationalCooperation': (context) =>
+              const InternationalCooperation(),
         });
   }
 }
