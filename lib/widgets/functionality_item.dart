@@ -60,13 +60,16 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                           padding: const EdgeInsets.only(left: 10),
                           child: Align(
                             alignment: Alignment.centerLeft,
-                            child: Text(
-                              widget.title,
-                              style: GoogleFonts.getFont('Poppins',
-                                  fontSize: 20,
-                                  fontStyle: FontStyle.normal,
-                                  fontWeight: FontWeight.w600),
-                              textAlign: TextAlign.center,
+                            child: Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Text(
+                                widget.title,
+                                style: GoogleFonts.getFont('Poppins',
+                                    fontSize: 20,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.w600),
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
