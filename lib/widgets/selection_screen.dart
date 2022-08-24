@@ -33,7 +33,7 @@ class SelectionScreen extends StatelessWidget {
                             fontStyle: FontStyle.normal))),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20, top: 7),
+                padding: const EdgeInsets.only(left: 20, top: 5),
                 child: TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, 'allCategories');
