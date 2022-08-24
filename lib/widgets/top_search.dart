@@ -19,7 +19,7 @@ class TopSearch extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: IconButton(
-                    padding: const EdgeInsets.only(right: 20, top: 20),
+                    padding: const EdgeInsets.only(right: 20, top: 10),
                     onPressed: () {
                       Navigator.pushNamed(context, 'informationAndContact');
                     },
@@ -31,7 +31,7 @@ class TopSearch extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.only(bottom: 50, left: 30),
+                  padding: const EdgeInsets.only(bottom: 35, left: 30),
                   child: Column(
                     children: [
                       Align(

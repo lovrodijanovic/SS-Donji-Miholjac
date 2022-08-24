@@ -4,7 +4,6 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/category_grid.dart';
 import '../models/functionality_screen.dart';
 import '../models/functionalites.dart';
-import '../models/functionality.dart';
 
 class AllCategories extends StatelessWidget {
   AllCategories({Key? key}) : super(key: key);

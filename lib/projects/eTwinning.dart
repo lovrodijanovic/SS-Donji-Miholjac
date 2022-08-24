@@ -37,7 +37,10 @@ To su iskusni eTwinneri koji pružaju pomoć i podršku novim i svim ostalim eTw
                 'https://www.etwinning.hr/hr/sadrzaj/o-nama/etwinningovi-ambasadori'),
             MyTextButton('eTwinning registracija',
                 'https://www.etwinning.net/hr/pub/index.htm'),
-            MyTextButton('eTwinning Hrvatska', 'https://www.etwinning.hr'),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: MyTextButton('eTwinning Hrvatska', 'https://www.etwinning.hr'),
+            ),
           ],
         ));
   }

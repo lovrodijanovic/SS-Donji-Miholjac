@@ -51,11 +51,14 @@ Za više informacije posjetite facebook stranicu udruge.''';
               ),
             ],
           ),
-          Image.network(
-            "http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/static3/1698/Image/ZASTAVA.jpg",
-            width: 200,
-            height: 250,
-            fit: BoxFit.contain,
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Image.network(
+              "http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/static3/1698/Image/ZASTAVA.jpg",
+              width: 200,
+              height: 250,
+              fit: BoxFit.contain,
+            ),
           ),
         ],
       ),

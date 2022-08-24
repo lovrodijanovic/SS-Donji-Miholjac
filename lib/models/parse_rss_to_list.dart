@@ -9,10 +9,26 @@ import 'package:intl/intl.dart';
 class ParseRssToList extends StatelessWidget {
   final Uri rssUrl;
   final String title;
-  ParseRssToList(this.rssUrl, this.title);
+  ParseRssToList(this.rssUrl, this.title, {Key? key}) : super(key: key);
 
-  final DateFormat? formatter = DateFormat('EEEE, MMM d, yyyy');
-
+  final DateFormat? formatter = DateFormat('d.MM.yyyy.');
+  
+  Future fetchNews() async {
+    final response = await http.get(rssUrl);
+    if (response.statusCode == 200) {
+      var decoded = RssFeed.parse(response.body);
+      return decoded.items
+          ?.map((item) => NotificationModel(
+              title: item.title,
+              description: item.description,
+              link: item.link,
+              pubDate: item.pubDate))
+          .toList();
+    } else {
+      throw const HttpException('Failed to fetch the data');
+    }
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -60,19 +76,4 @@ class ParseRssToList extends StatelessWidget {
     );
   }
 
-  Future fetchNews() async {
-    final response = await http.get(rssUrl);
-    if (response.statusCode == 200) {
-      var decoded = RssFeed.parse(response.body);
-      return decoded.items
-          ?.map((item) => NotificationModel(
-              title: item.title,
-              description: item.description,
-              link: item.link,
-              pubDate: item.pubDate))
-          .toList();
-    } else {
-      throw const HttpException('Failed to fetch the data');
-    }
-  }
 }

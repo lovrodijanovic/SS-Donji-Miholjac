@@ -10,7 +10,7 @@ class ProjectButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(5),
+      margin: const EdgeInsets.all(10),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             primary: const Color.fromRGBO(0, 109, 119, 1)),

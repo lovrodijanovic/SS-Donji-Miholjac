@@ -14,7 +14,7 @@ class MyTextButton extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerLeft,
         child: Padding(
-          padding: EdgeInsets.only(left: 30),
+          padding: const EdgeInsets.only(left: 30),
           child: Text(
             title,
             style: GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal),

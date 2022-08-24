@@ -23,7 +23,7 @@ class SelectionScreen extends StatelessWidget {
             alignment: WrapAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 20, top: 20, bottom: 5),
+                padding: const EdgeInsets.only(left: 20, top: 25, bottom: 15),
                 child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(gridTitle,
@@ -33,7 +33,7 @@ class SelectionScreen extends StatelessWidget {
                             fontStyle: FontStyle.normal))),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20, top: 7),
                 child: TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, 'allCategories');
