@@ -7,13 +7,14 @@ import '../models/functionality.dart';
 
 class MyNavigationBar extends StatefulWidget {
   final List<Functionality> highlightedFunctionalities = [
-    functionalities.elementAt(8),
-    functionalities.elementAt(3),
-    functionalities.elementAt(1),
+    functionalities.elementAt(8), //oglasna ploca
+    functionalities.elementAt(3), //dogadanja
+    functionalities.elementAt(2), //raspored
   ];
   final List<Functionality> studentFunctionalities = [
     functionalities.elementAt(8), //oglasna ploca
     functionalities.elementAt(2), //raspored
+    functionalities.elementAt(3), //dogadanja
     functionalities.elementAt(6), //upis u prvi razred
     functionalities.elementAt(4), //projekti
     functionalities.elementAt(5), //ucenicka zadruga
@@ -22,15 +23,16 @@ class MyNavigationBar extends StatefulWidget {
   final List<Functionality> parentFunctionalities = [
     functionalities.elementAt(8), //oglasna ploca
     functionalities.elementAt(2), //raspored
-    functionalities.elementAt(3), //doigadanja
-    functionalities.elementAt(4), //projekti
+    functionalities.elementAt(3), //dogadanja
+    functionalities.elementAt(6), //upis u prvi razred
+    functionalities.elementAt(7), //zavrsni razredi
   ];
   final List<Functionality> schoolFunctionalities = [
     functionalities.elementAt(0), //opce informacije
-    functionalities.elementAt(8), //oglasna ploca
     functionalities.elementAt(1), //programi i zanimanja
     functionalities.elementAt(4), //projekti
     functionalities.elementAt(9), //knjiznica
+    functionalities.elementAt(10), //kontakt
   ];
   @override
   State<MyNavigationBar> createState() => _MyNavigationBarState();

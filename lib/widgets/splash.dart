@@ -1,7 +1,8 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'navigation_bar.dart';
 
 class Splash extends StatefulWidget {
@@ -15,11 +16,11 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    _navigatetohome();
+    _navigateToHome();
   }
 
-  _navigatetohome() async {
-    await Future.delayed(const Duration(milliseconds: 3500), () {});
+  _navigateToHome() async {
+    await Future.delayed(const Duration(milliseconds: 3000), () {});
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => MyNavigationBar()));
   }

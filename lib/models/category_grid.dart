@@ -4,7 +4,7 @@ import '../widgets/functionality_item.dart';
 
 class CategoryGrid extends StatelessWidget {
   final List<Functionality> shownFunctionalities;
-  CategoryGrid(this.shownFunctionalities);
+  const CategoryGrid(this.shownFunctionalities, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
