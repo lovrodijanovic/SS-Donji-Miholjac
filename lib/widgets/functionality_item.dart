@@ -19,7 +19,8 @@ class FunctionalityItem extends StatefulWidget {
 }
 
 class _FunctionalityItemState extends State<FunctionalityItem> {
-  bool isInFavouritesPage() {
+
+  bool isInFavourites() {
     return favouriteFunctionalities.contains(functionalities[
         functionalities.indexWhere((element) => element.id == widget.id)]);
   }
@@ -74,7 +75,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                           ),
                         ),
                         IconButton(
-                            onPressed: isInFavouritesPage()
+                            onPressed: isInFavourites()
                                 ? () {
                                     setState(() {
                                       favouriteFunctionalities.remove(
@@ -91,7 +92,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                                                   element.id == widget.id)]);
                                     });
                                   },
-                            icon: isInFavouritesPage()
+                            icon: isInFavourites()
                                 ? Icon(Icons.favorite,
                                     color: HexColor('#006D77'))
                                 : Icon(Icons.favorite_border,
