@@ -3,7 +3,8 @@ import 'package:ss_donji_miholjac/models/functionality_screen.dart';
 import 'package:ss_donji_miholjac/models/text_block.dart';
 
 class FinancialLiteracy extends StatelessWidget {
-  final String financijskaPismenost = '''Projekt financijske pismenosti pokrenuli smo u skladu s potrebama suvremenog društva, a danas se savršeno nadopunjuje na međupredmetnu temu poduzetništva. Projekt je započeo školske godine 2015./16. kada je pokretač projekta Antonio Čmelak pripremio i održao radionice za završne razrede s temom "Upravljanje osobnim financijama" te pripremio prezentaciju na temu "Zaštita prava potrošača" povodom Dana prava potrošača i s uputama ih proslijedio svim razrednicima i uredio prigodne plakata u hodniku škole.
+  final String _financijskaPismenost =
+      '''Projekt financijske pismenosti pokrenuli smo u skladu s potrebama suvremenog društva, a danas se savršeno nadopunjuje na međupredmetnu temu poduzetništva. Projekt je započeo školske godine 2015./16. kada je pokretač projekta Antonio Čmelak pripremio i održao radionice za završne razrede s temom "Upravljanje osobnim financijama" te pripremio prezentaciju na temu "Zaštita prava potrošača" povodom Dana prava potrošača i s uputama ih proslijedio svim razrednicima i uredio prigodne plakata u hodniku škole.
 
 Program je nadopunjen školske godine 2016./17. s temom "Teenager financije" za sve učenike 2.razreda, a od školske godine 2017./18. se provodu u punom obliku kao i danas. Tijekom rujna 2017. godine nabavilo smo besplatne primjerke udžbenika "Moj nova, moja budućnost"  instituta za financijsko obrazovanje "Štedopis" i podijelili ga svim učenicima škole. Od tada završni razredi po završetku školovanja vraćaju svoj primjerak udžbenika u školu, a mi ih proslijeđujemo učenicima prvih razreda.
 
@@ -16,6 +17,8 @@ Na web stranici škole možete pronaći prezentacije za navedene teme iz financi
 
   @override
   Widget build(BuildContext context) {
-    return FunctionalityScreen(pageTitle: 'Financijska pismenost', child: SingleChildScrollView(child: TextBlock(financijskaPismenost)));
+    return FunctionalityScreen(
+        pageTitle: 'Financijska pismenost',
+        child: SingleChildScrollView(child: TextBlock(_financijskaPismenost)));
   }
 }

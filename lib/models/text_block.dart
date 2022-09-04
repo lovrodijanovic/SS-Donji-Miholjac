@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextBlock extends StatelessWidget {
-  final String text;
-  TextBlock(this.text);
+  final String _text;
+  const TextBlock(this._text, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class TextBlock extends StatelessWidget {
         child: Card(
             child: Padding(
           padding: const EdgeInsets.all(10),
-          child: Text(text,
+          child: Text(_text,
               style:
                   GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal)),
         )));

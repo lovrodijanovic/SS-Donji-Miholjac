@@ -5,12 +5,12 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/functionalites.dart';
 
 class FunctionalityItem extends StatefulWidget {
-  final String id;
-  final String title;
-  final SvgPicture image;
-  final String route;
+  final String _id;
+  final String _title;
+  final SvgPicture _image;
+  final String _route;
 
-  const FunctionalityItem(this.id, this.title, this.image, this.route,
+  const FunctionalityItem(this._id, this._title, this._image, this._route,
       {Key? key})
       : super(key: key);
 
@@ -19,10 +19,9 @@ class FunctionalityItem extends StatefulWidget {
 }
 
 class _FunctionalityItemState extends State<FunctionalityItem> {
-
   bool isInFavourites() {
     return favouriteFunctionalities.contains(functionalities[
-        functionalities.indexWhere((element) => element.id == widget.id)]);
+        functionalities.indexWhere((element) => element.id == widget._id)]);
   }
 
   @override
@@ -30,7 +29,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
     return InkWell(
       borderRadius: BorderRadius.circular(30),
       onTap: () {
-        Navigator.pushNamed(context, widget.route);
+        Navigator.pushNamed(context, widget._route);
       },
       splashColor: Theme.of(context).primaryColor,
       child: ConstrainedBox(
@@ -52,7 +51,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  widget.image,
+                  widget._image,
                   FittedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,7 +63,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                             child: Padding(
                               padding: const EdgeInsets.all(10),
                               child: Text(
-                                widget.title,
+                                widget._title,
                                 style: GoogleFonts.getFont('Poppins',
                                     fontSize: 20,
                                     fontStyle: FontStyle.normal,
@@ -81,7 +80,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                                       favouriteFunctionalities.remove(
                                           functionalities[functionalities
                                               .indexWhere((element) =>
-                                                  element.id == widget.id)]);
+                                                  element.id == widget._id)]);
                                     });
                                   }
                                 : () {
@@ -89,7 +88,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                                       favouriteFunctionalities.add(
                                           functionalities[functionalities
                                               .indexWhere((element) =>
-                                                  element.id == widget.id)]);
+                                                  element.id == widget._id)]);
                                     });
                                   },
                             icon: isInFavourites()

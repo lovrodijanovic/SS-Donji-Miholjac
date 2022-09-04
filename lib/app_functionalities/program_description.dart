@@ -5,29 +5,29 @@ import 'package:ss_donji_miholjac/models/text_block.dart';
 import '../models/functionality_screen.dart';
 
 class ProgramDescription extends StatelessWidget {
-  final String allPrograms =
+  final String _allPrograms =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Programi%20i%20zanimanja%20S%C5%A0DM.pdf';
-  final String opcaGimnazija =
+  final String _opcaGimnazija =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Op%C4%87a%20gimnazija.pdf';
-  final String komercijalist =
+  final String _komercijalist =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Komercijalist.pdf';
-  final String turistickoHotelijerskiKomercijalist =
+  final String _turistickoHotelijerskiKomercijalist =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Turisti%C4%8Dko-hotelijerski%20komercijalist.pdf';
-  final String agrotehnika =
+  final String _agrotehnika =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Agrotehni%C4%8Dar.pdf';
-  final String strojarskiRacunalniTehnicar =
+  final String _strojarskiRacunalniTehnicar =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Strojarsko%20ra%C4%8Dunalni%20tehni%C4%8Dar.pdf';
-  final String prodavac =
+  final String _prodavac =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Prodava%C4%8D.pdf';
-  final String cvjecar =
+  final String _cvjecar =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Cvje%C4%87ar.pdf';
-  final String poljoprivredniGospodarstvenik =
+  final String _poljoprivredniGospodarstvenik =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Poljoprivredni%20gospodarstvenik.pdf';
-  final String cncOperater =
+  final String _cncOperater =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/CNC%20operater.pdf';
-  final String automehanicar =
+  final String _automehanicar =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Automehani%C4%8Dar%20JMO.pdf';
-  final String strojobravar =
+  final String _strojobravar =
       'http://ss-donji-miholjac.skole.hr/upload/ss-donji-miholjac/images/multistatic/58/File/Strojobravar%20JMO.pdf';
 
   const ProgramDescription({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class ProgramDescription extends StatelessWidget {
         Column(children: [
           TextBlock(
               'Klikom na link ispod možete pregledati popis programa i zanimanja po obrazovnim sektorima Srednje škole Donji Miholjac.'),
-          MyTextButton("Popis programa i zanimanja", allPrograms),
+          MyTextButton("Popis programa i zanimanja", _allPrograms),
           TextBlock(
               'U dokumentima koji su priloženi možete pregledati nastavne planove za pojedina zanimanja za koja se mogu obrazovati učenici u Srednjoj školi Donji Miholjac. Proučite planove, pronađite se u određenom zanimanju i vidimo se na upisima!! Za nastavnii program koji vas zanima kliknite na njegov link.'),
           Padding(
@@ -52,13 +52,13 @@ class ProgramDescription extends StatelessWidget {
                       fontStyle: FontStyle.normal)),
             ),
           ),
-          MyTextButton("Opća gimnazija", opcaGimnazija),
-          MyTextButton("Komercijalist", komercijalist),
+          MyTextButton("Opća gimnazija", _opcaGimnazija),
+          MyTextButton("Komercijalist", _komercijalist),
           MyTextButton("Turističko hotelijerski komercijalist",
-              turistickoHotelijerskiKomercijalist),
-          MyTextButton("Agrotehničar", agrotehnika),
+              _turistickoHotelijerskiKomercijalist),
+          MyTextButton("Agrotehničar", _agrotehnika),
           MyTextButton(
-              "Strojarski računalni tehničar", strojarskiRacunalniTehnicar),
+              "Strojarski računalni tehničar", _strojarskiRacunalniTehnicar),
           Padding(
             padding: const EdgeInsets.only(left: 30, top: 10),
             child: Align(
@@ -68,13 +68,13 @@ class ProgramDescription extends StatelessWidget {
                       fontStyle: FontStyle.normal)),
             ),
           ),
-          MyTextButton("Prodavač", prodavac),
-          MyTextButton("Cvjećar", cvjecar),
+          MyTextButton("Prodavač", _prodavac),
+          MyTextButton("Cvjećar", _cvjecar),
           MyTextButton(
-              "Poljoprivredni gospodarstvenik", poljoprivredniGospodarstvenik),
-          MyTextButton("CNC operater", cncOperater),
-          MyTextButton("Automehaničar", automehanicar),
-          MyTextButton("Strojobravar", strojobravar),
+              "Poljoprivredni gospodarstvenik", _poljoprivredniGospodarstvenik),
+          MyTextButton("CNC operater", _cncOperater),
+          MyTextButton("Automehaničar", _automehanicar),
+          MyTextButton("Strojobravar", _strojobravar),
         ]),
       ]),
     );

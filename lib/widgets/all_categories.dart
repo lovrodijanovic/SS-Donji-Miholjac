@@ -6,7 +6,7 @@ import '../models/functionality_screen.dart';
 import '../models/functionalites.dart';
 
 class AllCategories extends StatelessWidget {
-  AllCategories({Key? key}) : super(key: key);
+  const AllCategories({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

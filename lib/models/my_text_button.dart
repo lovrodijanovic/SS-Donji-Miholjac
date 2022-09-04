@@ -3,10 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyTextButton extends StatelessWidget {
-  final String title;
-  final String linkToProgramDescription;
+  final String _title;
+  final String _linkToProgramDescription;
 
-  MyTextButton(this.title, this.linkToProgramDescription);
+  MyTextButton(this._title, this._linkToProgramDescription);
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +16,16 @@ class MyTextButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(left: 30),
           child: Text(
-            title,
+            _title,
             style: GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal),
           ),
         ),
       ),
       onPressed: () async {
-        if (await canLaunch(linkToProgramDescription)) {
-          launch(linkToProgramDescription);
+        if (await canLaunch(_linkToProgramDescription)) {
+          launch(_linkToProgramDescription);
         } else {
-          throw "Could not launch $linkToProgramDescription";
+          throw "Could not launch $_linkToProgramDescription";
         }
       },
     );

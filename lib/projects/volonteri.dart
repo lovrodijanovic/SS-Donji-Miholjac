@@ -5,7 +5,8 @@ import 'package:ss_donji_miholjac/models/text_block.dart';
 class Volunteers extends StatelessWidget {
   const Volunteers({Key? key}) : super(key: key);
 
-  final String description = '''Poštovani,                                           
+  final String _description =
+      '''Poštovani,                                           
 
 Osnivanje Volonterskog kluba Srednje škole Donji Miholjac  omogućilo nam je da steknemo bolje vještine za motiviranje mladih u aktivnije uključivanje rješavanja problema lokalne sredine.  Svjesni smo slabih karika trenutnog volontiranja u Donjem Miholjcu i želimo unaprijediti postojeći sustav volontiranja koji trenutno ne dobiva pažnju i potporu koju zaslužuje.
 
@@ -15,9 +16,10 @@ Humanitarni rad Srednje škole Donji Miholjac uvijek je bio prisutan ali unazad 
 
 Za sva pitanja i sugestije o mogućnoj suradnji javite se na dolje navedene kontakt podatke voditeljici Volonterskog kluba Srednje škole Donji Miholjac pedagoginji Mirti Grozdanić.''';
 
-
   @override
   Widget build(BuildContext context) {
-    return FunctionalityScreen(pageTitle: 'Volonteri', child: SingleChildScrollView(child: TextBlock(description)));
+    return FunctionalityScreen(
+        pageTitle: 'Volonteri',
+        child: SingleChildScrollView(child: TextBlock(_description)));
   }
 }

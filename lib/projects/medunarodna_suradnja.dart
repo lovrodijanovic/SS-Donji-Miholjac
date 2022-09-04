@@ -5,10 +5,12 @@ import '../models/parse_rss_to_list.dart';
 
 class InternationalCooperation extends StatelessWidget {
   const InternationalCooperation({Key? key}) : super(key: key);
-  static Uri rssUrl = Uri.parse(
+  static Uri _rssUrl = Uri.parse(
       'http://ss-donji-miholjac.skole.hr/rss/rssfeeder.php?rss_kid=6186&rss_ct=news&rss_uid=1');
   @override
   Widget build(BuildContext context) {
-    return FunctionalityScreen(pageTitle: 'Međunarodna suradnja', child: ParseRssToList(rssUrl,'Detalji'));
+    return FunctionalityScreen(
+        pageTitle: 'Međunarodna suradnja',
+        child: ParseRssToList(_rssUrl, 'Detalji'));
   }
 }

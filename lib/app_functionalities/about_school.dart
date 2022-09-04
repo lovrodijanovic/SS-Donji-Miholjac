@@ -3,7 +3,7 @@ import 'package:ss_donji_miholjac/models/text_block.dart';
 import '../models/functionality_screen.dart';
 
 class AboutSchool extends StatelessWidget {
-  static const String aboutSchool = """
+  static const String _aboutSchool = """
 Povijest srednjeg školstva na području Donjeg Miholjca ima bogatu vremensku tradiciju. Još davna 1890. godina smatra se početkom obrtničkog školstva u Donjem Miholjcu kada su pri pučkoj školi prvi šegrti počeli učiti naukovne osnove svojih obrta. 
 
 Godine 1947. godine škola dobiva naziv Škola učenika u privredi Donji Miholjac (popularno ŠUP). Gimnazijsko školovanje u Donjem Miholjcu započinje školske godine 1944. /45. , a 1965. godine počela je sa radom Gimnazija 'Ivo Lola Ribar' koja je preteča današnjeg gimnazijskog školovanja. 
@@ -20,7 +20,7 @@ Današnja Srednja škola Donji Miholjac službeno je registrirana 12. studenog 1
       pageTitle: 'O školi',
       child: ListView(
         children: [
-          TextBlock(aboutSchool),
+          TextBlock(_aboutSchool),
           Container(
             margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
             child: Image.network(

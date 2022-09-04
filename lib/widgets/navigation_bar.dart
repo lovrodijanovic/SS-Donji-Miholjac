@@ -6,12 +6,12 @@ import 'package:ss_donji_miholjac/widgets/selection_screen.dart';
 import '../models/functionality.dart';
 
 class MyNavigationBar extends StatefulWidget {
-  final List<Functionality> highlightedFunctionalities = [
+  final List<Functionality> _highlightedFunctionalities = [
     functionalities.elementAt(8), //oglasna ploca
     functionalities.elementAt(3), //dogadanja
     functionalities.elementAt(2), //raspored
   ];
-  final List<Functionality> studentFunctionalities = [
+  final List<Functionality> _studentFunctionalities = [
     functionalities.elementAt(8), //oglasna ploca
     functionalities.elementAt(2), //raspored
     functionalities.elementAt(3), //dogadanja
@@ -20,14 +20,14 @@ class MyNavigationBar extends StatefulWidget {
     functionalities.elementAt(5), //ucenicka zadruga
     functionalities.elementAt(7), //zavrsni razredi
   ];
-  final List<Functionality> parentFunctionalities = [
+  final List<Functionality> _parentFunctionalities = [
     functionalities.elementAt(8), //oglasna ploca
     functionalities.elementAt(2), //raspored
     functionalities.elementAt(3), //dogadanja
     functionalities.elementAt(6), //upis u prvi razred
     functionalities.elementAt(7), //zavrsni razredi
   ];
-  final List<Functionality> schoolFunctionalities = [
+  final List<Functionality> _schoolFunctionalities = [
     functionalities.elementAt(0), //opce informacije
     functionalities.elementAt(1), //programi i zanimanja
     functionalities.elementAt(4), //projekti
@@ -42,16 +42,16 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   static final List<Widget> _widgetOptions = <Widget>[
     SelectionScreen(
         gridTitle: 'Istraži istaknute kategorije',
-        shownFunctionalities: MyNavigationBar().highlightedFunctionalities),
+        shownFunctionalities: MyNavigationBar()._highlightedFunctionalities),
     SelectionScreen(
         gridTitle: 'Istraži kategorije',
-        shownFunctionalities: MyNavigationBar().studentFunctionalities),
+        shownFunctionalities: MyNavigationBar()._studentFunctionalities),
     SelectionScreen(
         gridTitle: 'Istraži kategorije',
-        shownFunctionalities: MyNavigationBar().parentFunctionalities),
+        shownFunctionalities: MyNavigationBar()._parentFunctionalities),
     SelectionScreen(
         gridTitle: 'Istraži kategorije',
-        shownFunctionalities: MyNavigationBar().schoolFunctionalities),
+        shownFunctionalities: MyNavigationBar()._schoolFunctionalities),
   ];
 
   int _selectedIndex = 0;

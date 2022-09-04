@@ -6,7 +6,7 @@ import 'package:ss_donji_miholjac/models/text_block.dart';
 class ETwinning extends StatelessWidget {
   const ETwinning({Key? key}) : super(key: key);
 
-  final String eTwinningText =
+  final String _eTwinningText =
       '''Najveća online zajednica škola u Europi, s više od 552600 registriranih djelatnika iz 189 784 vrtića i škola. eTwinning je jedna od aktivnosti programa Erasmus+. http://www.etwinning.net je portal namjenjen međunarodnoj suradnji i usavršavanju kako nastavnog tako i nenastavnog osoblja od vrtića, preko osnovnih pa sve do srednjih škola.   Ovaj portal služi nastavnicima i njihovim učenicima za upoznavanje i suradnju s kolegama iz europskih škola, a kroz eTwinning + i šire, kroz različite oblike usavršavanja te radu na međunarodnim, ali i nacionalnim virtualnim projektima.    
 
 
@@ -32,14 +32,15 @@ To su iskusni eTwinneri koji pružaju pomoć i podršku novim i svim ostalim eTw
         pageTitle: 'eTwinning',
         child: ListView(
           children: [
-            TextBlock(eTwinningText),
+            TextBlock(_eTwinningText),
             MyTextButton('eTwinning ambasadori',
                 'https://www.etwinning.hr/hr/sadrzaj/o-nama/etwinningovi-ambasadori'),
             MyTextButton('eTwinning registracija',
                 'https://www.etwinning.net/hr/pub/index.htm'),
             Padding(
               padding: const EdgeInsets.only(bottom: 20),
-              child: MyTextButton('eTwinning Hrvatska', 'https://www.etwinning.hr'),
+              child: MyTextButton(
+                  'eTwinning Hrvatska', 'https://www.etwinning.hr'),
             ),
           ],
         ));

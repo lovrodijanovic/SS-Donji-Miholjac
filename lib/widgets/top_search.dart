@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class TopSearch extends StatelessWidget {
+  const TopSearch({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(

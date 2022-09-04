@@ -4,14 +4,14 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/functionality_screen.dart';
 
 class Library extends StatelessWidget {
-  final Uri library = Uri.parse(
+  final Uri _library = Uri.parse(
       'https://sites.google.com/view/virtualnasdm/po%C4%8Detna-stranica');
 
   Library({Key? key}) : super(key: key);
 
   Future<void> _launchUrl() async {
-    if (!await launchUrl(library)) {
-      throw 'Could not launch $library';
+    if (!await launchUrl(_library)) {
+      throw 'Could not launch $_library';
     }
   }
 

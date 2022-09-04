@@ -4,10 +4,10 @@ import 'package:ss_donji_miholjac/models/text_block.dart';
 import '../models/functionality_screen.dart';
 
 class StudentAssociation extends StatelessWidget {
-  final String celestinaFacebook =
+  final String _celestinaFacebook =
       'https://www.facebook.com/people/U%C4%8Deni%C4%8Dka-zadruga-Celestina-Srednje-%C5%A1kole-Donji-Miholjac/100057340282677/';
 
-  final String studentAssociation = '''
+  final String _studentAssociation = '''
 Školski odbor Srednje škole Donji Miholjac na svojoj je sjednici održanoj 17. 09. 2015. godine donio Odluku o osnutku Učeničke zadruge "Celestina" koja će djelovati pri Srednjoj školi Donji Miholjac. Učenička zadruga "Celestina" dragovoljna je interesna učenička organizacija koja pridonosi postizanju odgojno - obrazovnih i društveno - gospodarskih ciljeva naše škole jer kao oblik izvannastavne aktivnosti učenicima omogućuje stjecanje radno - tehničkog, ekološkog, gospodarskog, društvenog i etno odgoja i obrazovanja te razvoj sposobnosti i korisno provođenje slobodnog vremena. Zadruga  je 02. 11. 2015. godine primljena u članstvo Hrvatske udruge učeničkog zadrugarstva. Učenička zadruge "Celestina" naziv je dobila po gospođi Celestini Roscher koja je tijekom prve polovine 20. stoljeća bila predsjednica Dobrotvornog gospojinskog društva u Donjem Miholjcu i koja se u to vrijeme bavila dobrotvornim radom. Nakon smrti Celestine Rosher njezin sin je u njenu čast dao izgraditi zgradu u kojoj je djelovala Zadužbina Celestine Rosher u kojoj su se do završetka II. svjetskog rata obrazovali učenici skromnijeg materijalnog stanja. U zgradi tadašnje Zadužbine Celestine Roscher danas se nalazi Srednja škola Donji Miholjac. 
 
 
@@ -38,7 +38,7 @@ Za više informacije posjetite facebook stranicu udruge.''';
       pageTitle: 'Učenička zadruga "Celestina"',
       child: ListView(
         children: [
-          TextBlock(studentAssociation),
+          TextBlock(_studentAssociation),
           Row(
             children: [
               const Padding(
@@ -46,8 +46,8 @@ Za više informacije posjetite facebook stranicu udruge.''';
                   child: Icon(Icons.facebook)),
               Padding(
                 padding: const EdgeInsets.only(bottom: 30),
-                child:
-                    MyTextButton("Facebook stranica udruge", celestinaFacebook),
+                child: MyTextButton(
+                    "Facebook stranica udruge", _celestinaFacebook),
               ),
             ],
           ),

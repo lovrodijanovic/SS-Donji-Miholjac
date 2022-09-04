@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProjectButton extends StatelessWidget {
-  final String buttonText;
-  final String route;
+  final String _buttonText;
+  final String _route;
 
-  ProjectButton(this.buttonText, this.route);
+  ProjectButton(this._buttonText, this._route);
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class ProjectButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             primary: const Color.fromRGBO(0, 109, 119, 1)),
         onPressed: () {
-          Navigator.pushNamed(context, route);
+          Navigator.pushNamed(context, _route);
         },
         child: Text(
-          buttonText,
+          _buttonText,
           style: GoogleFonts.getFont('Poppins', fontStyle: FontStyle.normal),
         ),
       ),

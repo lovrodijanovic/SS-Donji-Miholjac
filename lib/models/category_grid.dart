@@ -3,8 +3,8 @@ import 'package:ss_donji_miholjac/models/functionality.dart';
 import '../widgets/functionality_item.dart';
 
 class CategoryGrid extends StatelessWidget {
-  final List<Functionality> shownFunctionalities;
-  const CategoryGrid(this.shownFunctionalities, {Key? key}) : super(key: key);
+  final List<Functionality> _shownFunctionalities;
+  const CategoryGrid(this._shownFunctionalities, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class CategoryGrid extends StatelessWidget {
           mainAxisSpacing: 30,
           maxCrossAxisExtent: 200,
         ),
-        children: shownFunctionalities
+        children: _shownFunctionalities
             .map((funData) => FunctionalityItem(
                 funData.id, funData.title, funData.image, funData.route))
             .toList(),
