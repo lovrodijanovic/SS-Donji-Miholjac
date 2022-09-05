@@ -3,8 +3,8 @@ import 'package:flutter_phosphor_icons/flutter_phosphor_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-class TopSearch extends StatelessWidget {
-  const TopSearch({Key? key}) : super(key: key);
+class TopCard extends StatelessWidget {
+  const TopCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,25 +60,6 @@ class TopSearch extends StatelessWidget {
                     ],
                   ),
                 ),
-                /*Card(
-                        margin: const EdgeInsets.all(20),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Pretraži temu',
-                            hintStyle: GoogleFonts.getFont('Poppins',
-                                      color: Colors.grey,
-                                      fontSize: 15,
-                                      fontStyle: FontStyle.italic),
-                            prefixIcon: Icon(Icons.search, color: HexColor('#006D77'),),
-                            border: const OutlineInputBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(30.0))
-                            )
-                            )
-                          ),
-                      ),*/
               ],
             ),
           )),

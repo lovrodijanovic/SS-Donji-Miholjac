@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/category_grid.dart';
-import 'package:ss_donji_miholjac/widgets/top_search.dart';
+import 'package:ss_donji_miholjac/widgets/top_card.dart';
 import '../models/functionality.dart';
 
 class SelectionScreen extends StatelessWidget {
@@ -18,7 +18,7 @@ class SelectionScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Column(
         children: [
-          const TopSearch(),
+          const TopCard(),
           Wrap(
             alignment: WrapAlignment.spaceBetween,
             children: [
