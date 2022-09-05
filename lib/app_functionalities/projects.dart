@@ -10,7 +10,7 @@ class Projects extends StatelessWidget {
     return FunctionalityScreen(
         pageTitle: 'Projekti',
         child: ListView(
-          children: [
+          children: const [
             ProjectButton('EPAS škola', 'epas'),
             ProjectButton('eTwinning', 'eTwinning'),
             ProjectButton('Financijska pismenost', 'financialLiteracy'),

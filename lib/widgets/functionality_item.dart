@@ -3,15 +3,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ss_donji_miholjac/models/functionalites.dart';
+import '../models/functionality.dart';
 
 class FunctionalityItem extends StatefulWidget {
-  final String _id;
-  final String _title;
-  final SvgPicture _image;
-  final String _route;
+  final Functionality functionality;
 
-  const FunctionalityItem(this._id, this._title, this._image, this._route,
-      {Key? key})
+  const FunctionalityItem(
+      {Key? key, required this.functionality})
       : super(key: key);
 
   @override
@@ -21,7 +19,7 @@ class FunctionalityItem extends StatefulWidget {
 class _FunctionalityItemState extends State<FunctionalityItem> {
   bool isInFavourites() {
     return favouriteFunctionalities.contains(functionalities[
-        functionalities.indexWhere((element) => element.id == widget._id)]);
+        functionalities.indexWhere((element) => element.getId == widget.functionality.getId)]);
   }
 
   @override
@@ -29,7 +27,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
     return InkWell(
       borderRadius: BorderRadius.circular(30),
       onTap: () {
-        Navigator.pushNamed(context, widget._route);
+        Navigator.pushNamed(context, widget.functionality.getRoute);
       },
       splashColor: Theme.of(context).primaryColor,
       child: ConstrainedBox(
@@ -51,7 +49,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  widget._image,
+                  widget.functionality.getImage,
                   FittedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,7 +61,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                             child: Padding(
                               padding: const EdgeInsets.all(10),
                               child: Text(
-                                widget._title,
+                                widget.functionality.getTitle,
                                 style: GoogleFonts.getFont('Poppins',
                                     fontSize: 20,
                                     fontStyle: FontStyle.normal,
@@ -80,7 +78,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                                       favouriteFunctionalities.remove(
                                           functionalities[functionalities
                                               .indexWhere((element) =>
-                                                  element.id == widget._id)]);
+                                                  element.getId == widget.functionality.getId)]);
                                     });
                                   }
                                 : () {
@@ -88,7 +86,7 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                                       favouriteFunctionalities.add(
                                           functionalities[functionalities
                                               .indexWhere((element) =>
-                                                  element.id == widget._id)]);
+                                                  element.getId == widget.functionality.getId)]);
                                     });
                                   },
                             icon: isInFavourites()

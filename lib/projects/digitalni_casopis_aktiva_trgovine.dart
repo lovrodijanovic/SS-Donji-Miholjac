@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:ss_donji_miholjac/models/functionality_screen.dart';
 import 'package:ss_donji_miholjac/models/my_text_button.dart';
 import 'package:ss_donji_miholjac/models/text_block.dart';
@@ -17,7 +15,7 @@ class DigitalMagazine extends StatelessWidget {
         pageTitle: 'Digitalni časopis aktiva trgovine',
         child: ListView(children: [
           TextBlock(_description),
-          MyTextButton('Svi časopisi',
+          const MyTextButton('Svi časopisi',
               'https://cantonio385.wixsite.com/skole/copy-of-nastavnici'),
         ]));
   }

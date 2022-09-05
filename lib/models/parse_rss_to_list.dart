@@ -7,14 +7,14 @@ import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
 class ParseRssToList extends StatelessWidget {
-  final Uri rssUrl;
-  final String title;
-  ParseRssToList(this.rssUrl, this.title, {Key? key}) : super(key: key);
+  final Uri _rssUrl;
+  final String _title;
+  ParseRssToList(this._rssUrl, this._title, {Key? key}) : super(key: key);
 
-  final DateFormat? formatter = DateFormat('d.MM.yyyy.');
+  final DateFormat _formatter = DateFormat('d.MM.yyyy.');
   
   Future fetchNews() async {
-    final response = await http.get(rssUrl);
+    final response = await http.get(_rssUrl);
     if (response.statusCode == 200) {
       var decoded = RssFeed.parse(response.body);
       return decoded.items
@@ -51,10 +51,10 @@ class ParseRssToList extends StatelessWidget {
                               Align(
                                   alignment: Alignment.bottomRight,
                                   child:
-                                      Text(formatter!.format(item.pubDate!))),
+                                      Text(_formatter.format(item.pubDate!))),
                               Align(
                                   alignment: Alignment.bottomRight,
-                                  child: MyTextButton(title, item.link!))
+                                  child: MyTextButton(_title, item.link!))
                             ]));
                   },
                   separatorBuilder: (context, i) => const Divider(),

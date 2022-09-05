@@ -15,6 +15,8 @@ Povodom međunarodnog dana štednje 2018. godine, projekt smo proširili i izvan
 Tijekom proljeća 2022. godine program financijske pismenosti proširen je i na Osnovnu školu August Harambašić iz D.Miholjca kada je voditelj projekta Antonio Čmelak u suradnjis  nastavnikom geografije Mariom Pintarićem proveo niz predavanaj prilagođenih učenicima od 5. do 8. razreda s naglaskom na ifnormacije o uvođenju eura i dogovaranje nastavka suradnje kroz programe poduzetništva.
 Na web stranici škole možete pronaći prezentacije za navedene teme iz financijske pismenosti.''';
 
+  const FinancialLiteracy({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return FunctionalityScreen(

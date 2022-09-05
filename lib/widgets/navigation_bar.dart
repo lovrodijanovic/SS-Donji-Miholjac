@@ -34,6 +34,8 @@ class MyNavigationBar extends StatefulWidget {
     functionalities.elementAt(9), //knjiznica
     functionalities.elementAt(10), //kontakt
   ];
+
+  MyNavigationBar({Key? key}) : super(key: key);
   @override
   State<MyNavigationBar> createState() => _MyNavigationBarState();
 }

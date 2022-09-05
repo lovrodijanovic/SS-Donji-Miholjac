@@ -38,10 +38,10 @@ class ProgramDescription extends StatelessWidget {
       pageTitle: 'Programi i zanimanja',
       child: ListView(children: [
         Column(children: [
-          TextBlock(
+          const TextBlock(
               'Klikom na link ispod možete pregledati popis programa i zanimanja po obrazovnim sektorima Srednje škole Donji Miholjac.'),
           MyTextButton("Popis programa i zanimanja", _allPrograms),
-          TextBlock(
+          const TextBlock(
               'U dokumentima koji su priloženi možete pregledati nastavne planove za pojedina zanimanja za koja se mogu obrazovati učenici u Srednjoj školi Donji Miholjac. Proučite planove, pronađite se u određenom zanimanju i vidimo se na upisima!! Za nastavnii program koji vas zanima kliknite na njegov link.'),
           Padding(
             padding: const EdgeInsets.only(left: 30),

@@ -33,12 +33,12 @@ To su iskusni eTwinneri koji pružaju pomoć i podršku novim i svim ostalim eTw
         child: ListView(
           children: [
             TextBlock(_eTwinningText),
-            MyTextButton('eTwinning ambasadori',
+            const MyTextButton('eTwinning ambasadori',
                 'https://www.etwinning.hr/hr/sadrzaj/o-nama/etwinningovi-ambasadori'),
-            MyTextButton('eTwinning registracija',
+            const MyTextButton('eTwinning registracija',
                 'https://www.etwinning.net/hr/pub/index.htm'),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 20),
               child: MyTextButton(
                   'eTwinning Hrvatska', 'https://www.etwinning.hr'),
             ),

@@ -20,7 +20,7 @@ Današnja Srednja škola Donji Miholjac službeno je registrirana 12. studenog 1
       pageTitle: 'O školi',
       child: ListView(
         children: [
-          TextBlock(_aboutSchool),
+          const TextBlock(_aboutSchool),
           Container(
             margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
             child: Image.network(

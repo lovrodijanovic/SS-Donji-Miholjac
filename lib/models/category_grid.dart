@@ -19,7 +19,7 @@ class CategoryGrid extends StatelessWidget {
         ),
         children: _shownFunctionalities
             .map((funData) => FunctionalityItem(
-                funData.id, funData.title, funData.image, funData.route))
+                functionality: funData))
             .toList(),
       ),
     );

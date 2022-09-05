@@ -10,7 +10,7 @@ class SelectionScreen extends StatelessWidget {
   final List<Functionality> shownFunctionalities;
 
   const SelectionScreen(
-      {required this.gridTitle, required this.shownFunctionalities});
+      {Key? key, required this.gridTitle, required this.shownFunctionalities}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class SelectionScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Column(
         children: [
-          TopSearch(),
+          const TopSearch(),
           Wrap(
             alignment: WrapAlignment.spaceBetween,
             children: [

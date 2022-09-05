@@ -5,7 +5,7 @@ class ProjectButton extends StatelessWidget {
   final String _buttonText;
   final String _route;
 
-  ProjectButton(this._buttonText, this._route);
+  const ProjectButton(this._buttonText, this._route, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -39,7 +39,7 @@ class FirstGrade extends StatelessWidget {
           children: [
             Column(
               children: [
-                TextBlock(
+                const TextBlock(
                     'Poštovani. Na ovom mjestu možete pronaći u prilozima natječaje raspisane za upis u prvi razred kao i sve ostale važne informacije potrebne za donošenje odluke o izboru za upis u prvi razred i samu proceduru upisa. Kako se bude približavao trenutak samih upisa moći će te pronaći sve više korisnih informacija koje će Vam olakšati odluku koji program i zanimanje želite odabrati u našoj školi u kojoj će te upravo vi biti prvi razredi u našim novim prostorima suvremeno opremljene zgrade i sportske dvorane. Natječaj za upis u 1. razred u školskoj godini 2022. / 23. pogledajte klikom na gumb ispod.'),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(

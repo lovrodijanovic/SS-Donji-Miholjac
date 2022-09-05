@@ -1,6 +1,4 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/basic.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:ss_donji_miholjac/models/functionality_screen.dart';
 import 'package:ss_donji_miholjac/models/my_text_button.dart';
 import 'package:ss_donji_miholjac/models/text_block.dart';
@@ -18,7 +16,7 @@ class EpasSkola extends StatelessWidget {
         child: Column(
           children: [
             TextBlock(_epas),
-            MyTextButton('Link na web stranicu projekta',
+            const MyTextButton('Link na web stranicu projekta',
                 'https://epasssdm.wixsite.com/epasssdm')
           ],
         ));

@@ -6,7 +6,7 @@ class MyTextButton extends StatelessWidget {
   final String _title;
   final String _linkToProgramDescription;
 
-  MyTextButton(this._title, this._linkToProgramDescription);
+  const MyTextButton(this._title, this._linkToProgramDescription, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
