@@ -17,13 +17,13 @@ class FunctionalityItem extends StatefulWidget {
 }
 
 class _FunctionalityItemState extends State<FunctionalityItem> {
-  bool isInFavourites() {
-    return favouriteFunctionalities.contains(functionalities[
-        functionalities.indexWhere((element) => element.getId == widget.functionality.getId)]);
+  bool _isInFavourites() {
+    return favouriteFunctionalities.contains(functionalities[functionalities.indexWhere((element) => element.getId == widget.functionality.getId)]);
   }
 
   @override
   Widget build(BuildContext context) {
+    var matchedFunctionality = functionalities[functionalities.indexWhere((element) => element.getId == widget.functionality.getId)];
     return InkWell(
       borderRadius: BorderRadius.circular(30),
       onTap: () {
@@ -72,24 +72,18 @@ class _FunctionalityItemState extends State<FunctionalityItem> {
                           ),
                         ),
                         IconButton(
-                            onPressed: isInFavourites()
+                            onPressed: _isInFavourites()
                                 ? () {
                                     setState(() {
-                                      favouriteFunctionalities.remove(
-                                          functionalities[functionalities
-                                              .indexWhere((element) =>
-                                                  element.getId == widget.functionality.getId)]);
+                                      favouriteFunctionalities.remove(matchedFunctionality);
                                     });
                                   }
                                 : () {
                                     setState(() {
-                                      favouriteFunctionalities.add(
-                                          functionalities[functionalities
-                                              .indexWhere((element) =>
-                                                  element.getId == widget.functionality.getId)]);
+                                      favouriteFunctionalities.add(matchedFunctionality);
                                     });
                                   },
-                            icon: isInFavourites()
+                            icon: _isInFavourites()
                                 ? Icon(Icons.favorite,
                                     color: HexColor('#006D77'))
                                 : Icon(Icons.favorite_border,
